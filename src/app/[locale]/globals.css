@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+/* Variable .dark */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Variables semánticas */
+@layer base {
+  :root {
+    /* Paleta IKM (manual de marca) */
+    --ikm-primary: #0072bc;
+    --ikm-secondary: #202B51;
+    
+    --ikm-accent: #28A6DF; 
+    --ikm-teal: #48B8AB;
+    --ikm-mint: #8FCCBC;
+    --ikm-purple: #833e90;
+
+    /* Neutros / superficies */
+    --ikm-bg: #ffffff;
+    --ikm-fg: #0b1220;        /* texto base */
+    --ikm-muted: #9b9c9f;     /* texto secundario */
+    --ikm-border: #e5e7eb;    /* gris claro para bordes */
+
+    /* Estados */
+    --ikm-success: #48B8AB;
+    --ikm-info: #28A6DF;
+    --ikm-warning: #fbbf24;
+    --ikm-danger: #ef4444;
+  }
+
+  /* Overrides en tema oscuro */
+  .dark {
+    --ikm-bg: #0b1220;        /* fondo oscuro */
+    --ikm-fg: #e6eaf2;        /* texto sobre oscuro */
+    --ikm-muted: #a2a9b5;
+    --ikm-border: #243042;
+
+    /* Semejante al primario para contrastar más en dark */
+    --ikm-primary: #28A6DF;
+  }
+
+}
+
+/* Mapeo de variables → tokens Tailwind  */
+@theme inline {
+  /* Tipografías */
+  --font-oswald: var(--font-oswald);
+  --font-lato: var(--font-lato);
+  --font-poppins: var(--font-poppins);
+
+  /* Colores semánticos IKM → utilidades Tailwind */
+  --color-primary: var(--ikm-primary);
+  --color-primary-foreground: white;
+
+  --color-secondary: var(--ikm-secondary);
+  --color-secondary-foreground: white;
+
+  --color-accent: var(--ikm-accent);
+  --color-accent-foreground: black;
+
+  --color-teal: var(--ikm-teal);
+  --color-mint: var(--ikm-mint);
+  --color-purple: var(--ikm-purple);
+
+  --color-surface: var(--ikm-bg);
+  --color-surface-foreground: var(--ikm-fg);
+  --color-muted: var(--ikm-muted);
+  --color-border: var(--ikm-border);
+
+  --color-success: var(--ikm-success);
+  --color-info: var(--ikm-info);
+  --color-warning: var(--ikm-warning);
+  --color-danger: var(--ikm-danger);
+
+}

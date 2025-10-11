@@ -1,0 +1,16 @@
+{
+  "language": {
+    "en": "English",
+    "es": "Spanish"
+  },
+  "homePage": {
+    "hero": {
+      "header": [
+        { "href": "/", "text": "Home" },
+        { "href": "/services", "text": "Services" },
+        { "href": "/team", "text": "Team" }
+      ],
+      "header_btnContac": { "href": "/contact", "text": "Contact us" }
+    }
+  }
+}

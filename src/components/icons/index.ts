@@ -1,0 +1,10 @@
+export * from './icon_arrow_up'
+export * from './icon_arrow_down'
+export * from './icon_arrow_left'
+export * from './icon_arrow_right'
+
+export * from './icon_phone'
+export * from './icon_locate'
+export * from './icon_loading'
+export * from './icon_menu_bars'
+export * from './icon_send_email'
