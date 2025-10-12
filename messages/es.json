@@ -10,7 +10,34 @@
         { "href": "/servicios", "text": "Servicios" },
         { "href": "/equipo", "text": "Equipo" }
       ],
-      "header_btnContac": { "href": "/contacto", "text": "Contactanos" }
+      "header_btnContac": { "href": "/contacto", "text": "Contactanos" },
+      "titles": {
+        "h2": "Gestión experta de",
+        "h1": "DATOS PETROLEROS",
+        "h3": "Servicios para <hl>Petroleo</hl> & <hl>Gas</hl>"
+      },
+      "brandsTitle": "Empresas de todo el mundo escalan sus operaciones de información con IKM"
+    },
+    "aboutSection": {
+      "title": "Transformando a Través de la <hl>Innovación Tecnológica.</hl>",
+      "description": "Somos un proveedor experto de servicios para la industria del petróleo y el gas. Ofrecemos una metodología integral basada en la sinergia entre las personas, los procesos empresariales y la tecnología. Contamos con un historial probado en la gestión, organización e interconexión de la compleja información corporativa de nuestros clientes.",
+      "cards": {
+        "card1": {
+          "title": "Desde el 2002",
+          "description": "Cuando se fundó como una empresa de consultoría centrada en la gestión del conocimiento para la información compleja y valiosa propia del sector del petróleo y el gas.",
+          "more": "Conoce más"
+        },
+        "card2": {
+          "title": "Un equipo de expertos",
+          "description": "Con más de 130 profesionales a tiempo completo, entre los que se incluyen ingenieros petroleros, geólogos, científicos y expertos en tecnología, cuenta con más de 20 años de experiencia en la industria del petróleo y el gas.",
+          "more": "Conoce más"
+        },
+        "card3": {
+          "title": "Enfoque moderno",
+          "description": "Mejora el retorno de la inversión e integra inteligencia artificial para modernizar las operaciones de nuestros clientes y proteger el conocimiento institucional.",
+          "more": "Conoce más"
+        }
+      }
     }
   }
 }

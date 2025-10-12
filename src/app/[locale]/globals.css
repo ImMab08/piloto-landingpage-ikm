@@ -9,6 +9,7 @@
     /* Paleta IKM (manual de marca) */
     --ikm-primary: #0072bc;
     --ikm-secondary: #202B51;
+    --ikm-tertiary: #585958;
     
     --ikm-accent: #28A6DF; 
     --ikm-teal: #48B8AB;
@@ -17,6 +18,7 @@
 
     /* Neutros / superficies */
     --ikm-bg: #ffffff;
+    --ikm-bg-secondary: #F5F5F5;
     --ikm-fg: #0b1220;        /* texto base */
     --ikm-muted: #9b9c9f;     /* texto secundario */
     --ikm-border: #e5e7eb;    /* gris claro para bordes */
@@ -54,15 +56,21 @@
 
   --color-secondary: var(--ikm-secondary);
   --color-secondary-foreground: white;
-
+  
   --color-accent: var(--ikm-accent);
   --color-accent-foreground: black;
 
+  --color-text-primary: var(--ikm-primary);
+  --color-text-secondary: var(--ikm-bg);
+  --color-text-tertiary: var(--ikm-tertiary);
+  
   --color-teal: var(--ikm-teal);
   --color-mint: var(--ikm-mint);
   --color-purple: var(--ikm-purple);
 
   --color-surface: var(--ikm-bg);
+  --color-background-secondary: var(--ikm-bg-secondary);
+
   --color-surface-foreground: var(--ikm-fg);
   --color-muted: var(--ikm-muted);
   --color-border: var(--ikm-border);
@@ -73,3 +81,17 @@
   --color-danger: var(--ikm-danger);
 
 }
+
+/* Desplazamiento continuo duplicando el contenido */
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* avanza el ancho de un set */
+}
+
+/* Si el usuario prefiere menos movimiento, detén la animación */
+@media (prefers-reduced-motion: reduce) {
+  .marquee {
+    animation-play-state: paused !important;
+  }
+}
+

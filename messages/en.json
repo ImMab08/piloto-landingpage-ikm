@@ -10,7 +10,34 @@
         { "href": "/services", "text": "Services" },
         { "href": "/team", "text": "Team" }
       ],
-      "header_btnContac": { "href": "/contact", "text": "Contact us" }
+      "header_btnContac": { "href": "/contact", "text": "Contact us" },
+      "titles": {
+        "h2": "Expert management of",
+        "h1": "OIL DATA",
+        "h3": "Services for <hl>Oil</hl> & <hl>Gas</hl>"
+      },
+      "brandsTitle": "Companies worldwide scale their information operations with IKM"
+    },
+    "aboutSection": {
+      "title": "Transforming Through <hl>Technological Innovation.</hl>",
+      "description": "We are an expert service provider for the oil and gas industry. We offer a comprehensive methodology based on the synergy between people, business processes, and technology. We have a proven track record in managing, organizing, and interconnecting our clients' complex corporate information.",
+      "cards": {
+        "card1": {
+          "title": "Since 2002",
+          "description": "Founded as a consulting company focused on knowledge management for the complex and valuable information inherent to the oil and gas sector.",
+          "more": "Learn more"
+        },
+        "card2": {
+          "title": "A team of experts",
+          "description": "With more than 130 full-time professionals — including petroleum engineers, geologists, scientists, and technology experts — we bring over 20 years of experience in the oil and gas industry.",
+          "more": "Learn more"
+        },
+        "card3": {
+          "title": "Modern approach",
+          "description": "Enhancing return on investment by integrating artificial intelligence to modernize our clients’ operations and protect institutional knowledge.",
+          "more": "Learn more"
+        }
+      }
     }
   }
 }

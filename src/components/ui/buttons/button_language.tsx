@@ -11,7 +11,7 @@ import { IconArrowDown } from "@/components/icons";
 
 const ALL_LOCALES = routing.locales as readonly string[];
 
-export function ButtonLanguage() {
+export function ButtonLanguage({...props}) {
   const [open, setOpen] = useState(false);
 
   const locale = useLocale();
@@ -28,7 +28,7 @@ export function ButtonLanguage() {
   };
 
   return (
-    <div className="relative">
+    <div {...props} className="relative">
       <Button
         variant={open ? "unstyled" : "outline"}
         onClick={() => setOpen(!open)}
