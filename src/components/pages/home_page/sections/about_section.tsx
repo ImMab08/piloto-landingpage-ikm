@@ -8,7 +8,7 @@ export function AboutSection() {
   const cards = useTranslations("homePage.aboutSection.cards");
 
   return (
-    <section className="relative w-full flex items-center justify-center h-full py-60 md:h-screen">
+    <section className="relative w-full flex items-center justify-center h-full py-60 md:h-screen overflow-x-hidden md:overflow-x-visible">
       {/* FONDO con desvanecidos azules */}
       <div className="pointer-events-none absolute inset-0">
         {/* degradé general */}
@@ -78,7 +78,7 @@ export function AboutSection() {
                   {cards("card2.description")}
                 </p>
               </div>
-              <Link href="" className="group font-oswald ml-auto inline-flex items-center text-purple font-semibold">
+              <Link href="" className="group font-oswald ml-auto md:mr-auto inline-flex items-center text-purple font-semibold">
                 {cards("card2.more")}
                 <IconArrowRight className="size-8 pt-1 transition-transform group-hover:translate-x-1" />
               </Link>

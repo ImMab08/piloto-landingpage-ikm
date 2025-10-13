@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import { IconArrowRight } from "@/components/icons"; // usa tu ícono
+import { IconArrowRightAlt } from "@/components/icons";
 
 type Metric = { value: string; text: string };
 type UseCase = {
@@ -21,7 +21,6 @@ type UseCase = {
 export function UseCasesSection() {
   const t = useTranslations("homePage.useCases");
 
-  // ⬅️ Traemos el array directamente del JSON
   const items = t.raw("cases") as UseCase[];
 
   const [active, setActive] = useState(0);
@@ -31,14 +30,14 @@ export function UseCasesSection() {
     <section className="relative w-full py-16 md:py-24">
       {/* Título */}
       <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16">
-        <h2 className="font-oswald text-4xl md:text-5xl text-text-primary">
+        <h2 className="font-oswald font-medium text-4xl md:text-5xl text-text-primary">
           {t("title")}
         </h2>
       </div>
 
-      <div className="mt-10 max-w-7xl mx-auto px-6 md:px-10 lg:px-16 grid gap-10 lg:grid-cols-[50px_1fr]">
+      <div className="mt-10 max-w-7xl mx-auto px-5 lg:px-16 grid gap-10 lg:grid-cols-[50px_1fr]">
         {/* Tabs (horizontales en mobile, verticales rotados en desktop) */}
-        <div className="">
+        <div className="overflow-x-hidden">
           <div className="flex lg:flex-col gap-3 overflow-x-auto lg:overflow-visible pb-2 lg:pb-0">
             {items.map((it, i) => (
               <button
@@ -60,10 +59,8 @@ export function UseCasesSection() {
         </div>
 
         {/* Contenido */}
-        <div className="grid gap-10 lg:grid-cols-2 items-start">
-          {/* Imagen con “tarjeta” y respaldo azul */}
-          <div className="relative text-left mx-auto w-full max-w-[520px] aspect-[4/5]">
-            {/* panel azul detrás */}
+        <div className="grid lg:grid-cols-2 items-start space-y-10 md:space-y-0">
+          <div className="relative text-left mx-auto w-full max-w-[450px] aspect-[4/5]">
             <div className="absolute inset-0 translate-x-[-14px] translate-y-[14px] rounded-2xl bg-primary -z-10" />
             <div className="relative h-full w-full overflow-hidden rounded-2xl shadow-[0_6px_20px_rgba(0,0,0,0.2)]">
               <Image
@@ -78,8 +75,8 @@ export function UseCasesSection() {
           </div>
 
           {/* Texto + CTA + métricas */}
-          <div className="h-full flex flex-col justify-between">
-            <div className="spaxe-y-2">
+          <div className="h-full flex flex-col justify-between space-y-10 md:space-y-0">
+            <div className="spaxe-y-">
               <h3 className="font-oswald text-3xl md:text-4xl text-primary mb-3">
                 {current.title}
               </h3>
@@ -87,35 +84,32 @@ export function UseCasesSection() {
               <p className="text-text-tertiary leading-6 max-w-prose">
                 {current.description}
               </p>
+
+              <div className="mt-8 grid grid-cols-2 gap-5 max-w-xl">
+                {current.metrics.map((metric, id) => (
+                  <div key={id} className="flex space-x-2">
+                    <div className="w-2.5 h-full bg-accent"></div>
+                    <div className="">
+                      <p className="text-2xl font-oswald text-primary">
+                        {metric.value}
+                      </p>
+                      <p className="text-sm text-text-tertiary">{metric.text}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
 
-            <div>
+            <div className="">
               <Link
                 href={current.href}
                 className="inline-flex w-auto items-center gap-2 rounded-lg bg-accent text-white p-2 font-oswald shadow hover:brightness-110 transition"
               >
                 <div className="text-primary bg-surface py-2 px-4 rounded-lg">
-                  <IconArrowRight className="size-5" />
+                  <IconArrowRightAlt className="size-5" />
                 </div>
                 <span className="text-xl">{current.more}</span>
               </Link>
-            </div>
-
-            {/* métricas */}
-            <div className="mt-8 grid grid-cols-2 gap-5 max-w-xl">
-              {current.metrics.map((m, idx) => (
-                <div key={idx} className="flex space-x-2">
-                  <div className="w-2.5 h-full bg-accent"></div>
-                  <div className="">
-                    <p className="text-2xl font-oswald text-primary">
-                      {m.value}
-                    </p>
-                    <p className="text-sm text-text-tertiary">
-                      {m.text}
-                    </p>
-                  </div>
-                </div>
-              ))}
             </div>
           </div>
         </div>

@@ -2,6 +2,7 @@ export * from './icon_arrow_up'
 export * from './icon_arrow_down'
 export * from './icon_arrow_left'
 export * from './icon_arrow_right'
+export * from './icon_arrow_right_alt'
 
 export * from './icon_flow'
 export * from './icon_team'
