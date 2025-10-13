@@ -11,9 +11,17 @@
         { "href": "/equipo", "text": "Equipo" }
       ],
       "information": [
-        {"icon": "email", "title": "Contactanos", "text": "service@ikm.com.co"},
-        {"icon": "phone", "title": "Llamanos", "text": "+57 (601) 123 4565"},
-        {"icon": "location", "title": "Ubicación", "text": "Cl. 110 #9-25 – Bogotá, COL"}
+        {
+          "icon": "email",
+          "title": "Contactanos",
+          "text": "service@ikm.com.co"
+        },
+        { "icon": "phone", "title": "Llamanos", "text": "+57 (601) 123 4565" },
+        {
+          "icon": "location",
+          "title": "Ubicación",
+          "text": "Cl. 110 #9-25 – Bogotá, COL"
+        }
       ],
       "header_btnContac": { "href": "/contacto", "text": "Contactanos" },
       "titles": {
@@ -43,6 +51,71 @@
           "more": "Conoce más"
         }
       }
+    },
+    "useCases": {
+      "title": "Casos de uso",
+      "cases": [
+        {
+          "id": "ecopetrol",
+          "tab": "Ecopetrol",
+          "title": "Fábrica de gestión documental",
+          "description": "IKM se asoció con ECOPETROL para desarrollar una sólida estrategia corporativa para la división «Construcción e Infraestructura Compleja» de la empresa. A través de nuestro innovador servicio, creamos una plataforma de análisis de datos de exploración y perforación de petróleo y gas que utiliza herramientas avanzadas, como la inteligencia artificial y el aprendizaje automático, para transformar por completo la forma en que se construyen y operan los proyectos industriales y de infraestructura.",
+          "image": "/images/uses_case/ecopetrol-bg.png",
+          "href": "/casos/ecopetrol",
+          "more": "Conoce más",
+          "metrics": [
+            { "value": "6 meses", "text": "Reducción de costos" },
+            { "value": "6 meses", "text": "Reducción de costos" },
+            { "value": "6 meses", "text": "Reducción de costos" },
+            { "value": "6 meses", "text": "Reducción de costos" }
+          ]
+        },
+        {
+          "id": "frontera",
+          "tab": "Frontera",
+          "title": "Frontera",
+          "description": "Nuestro servicio ha mejorado significativamente la ventaja competitiva de la empresa en las áreas clave de E&P, así como en sus departamentos de apoyo. Este modelo propio lleva más de una década en funcionamiento en todas las áreas de la  empresa, gracias a sus sólidas operaciones en  múltiples países. IKM gestiona actualmente más de 4 000 000 de documentos  y garantiza que toda la información de la empresa esté organizada de forma eficiente y sea fácilmente accesible.",
+          "image": "/images/uses_case/frontera-bg.png",
+          "href": "/casos/frontera",
+          "more": "Conoce más",
+          "metrics": [
+            { "value": "6 meses", "text": "Reducción de costos" },
+            { "value": "6 meses", "text": "Reducción de costos" },
+            { "value": "6 meses", "text": "Reducción de costos" },
+            { "value": "6 meses", "text": "Reducción de costos" }
+          ]
+        },
+        {
+          "id": "hocol",
+          "tab": "Hocol",
+          "title": "Hocol",
+          "description": "IKM ha implementado con éxito la 'Memoria Corporativa' de Hocol, una poderosa herramienta que gestiona más de 1,5 millones de documentos y  facilita la comunicación interna entre todos los departamentos,  incluidos proveedores, subcontratistas, consultores y partes interesadas. Con más de 13 años de servicio continuo, nuestro equipo ha desarrollado  sólidas estrategias y metodologías de gestión de contenido, lo que ha permitido nuevas capacidades tecnológicas que han transformado las operaciones en toda la empresa.",
+          "image": "/images/uses_case/hocol-bg.png",
+          "href": "/casos/hocol",
+          "more": "Conoce más",
+          "metrics": [
+            { "value": "6 meses", "text": "Reducción de costos" },
+            { "value": "6 meses", "text": "Reducción de costos" },
+            { "value": "6 meses", "text": "Reducción de costos" },
+            { "value": "6 meses", "text": "Reducción de costos" }
+          ]
+        },
+        {
+          "id": "minEnergias",
+          "tab": "Min. Minas y energías",
+          "title": "Ministerio de Minas y Energías",
+          "description": "Clasificación inteligente e identificación de inventario de datos de todos los documentos técnicos de pozos e información sísmica del Banco Nacional de Información Petrolera. Nuestro servicio realizó un análisis exhaustivo y experto de la integridad de la información sobre activos exploratorios y productivos en Colombia.",
+          "image": "/images/uses_case/min-energias-bg.png",
+          "href": "/casos/min-energias",
+          "more": "Conoce más",
+          "metrics": [
+            { "value": "6 meses", "text": "Reducción de costos" },
+            { "value": "6 meses", "text": "Reducción de costos" },
+            { "value": "6 meses", "text": "Reducción de costos" },
+            { "value": "6 meses", "text": "Reducción de costos" }
+          ]
+        }
+      ]
     }
   }
 }

@@ -44,5 +44,40 @@
         }
       }
     }
+  },
+  "useCases": {
+    "title": "Casos de uso",
+    "cases": [
+      {
+        "id": "ecopetrol",
+        "tab": "Ecopetrol",
+        "title": "Fábrica de gestión documental",
+        "description": "…tu párrafo…",
+        "image": "/images/uses_case/ecopetrol-bg.png",
+        "href": "/casos/ecopetrol",
+        "more": "Conoce más",
+        "metrics": [
+          { "value": "6 meses", "text": "Reducción de costos" },
+          { "value": "6 meses", "text": "Reducción de costos" },
+          { "value": "6 meses", "text": "Reducción de costos" },
+          { "value": "6 meses", "text": "Reducción de costos" }
+        ]
+      },
+      {
+        "id": "frontera",
+        "tab": "Frontera",
+        "title": "",
+        "description": "",
+        "image": "/images/uses_case/frontera.jpg",
+        "href": "/casos/frontera",
+        "more": "Conoce más",
+        "metrics": [
+          { "value": "", "text": "" },
+          { "value": "", "text": "" },
+          { "value": "", "text": "" },
+          { "value": "", "text": "" }
+        ]
+      }
+    ]
   }
 }

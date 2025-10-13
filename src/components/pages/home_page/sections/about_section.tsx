@@ -8,7 +8,7 @@ export function AboutSection() {
   const cards = useTranslations("homePage.aboutSection.cards");
 
   return (
-    <section className="relative w-full flex items-center justify-center h-full py-60 md:h-screen overflow-hidden">
+    <section className="relative w-full flex items-center justify-center h-full py-60 md:h-screen">
       {/* FONDO con desvanecidos azules */}
       <div className="pointer-events-none absolute inset-0">
         {/* degradé general */}
