@@ -37,8 +37,8 @@ export function LogosCarousel() {
               src={src}
               alt="Client logo"
               width={140}
-              height={40}
-              className="h-8 md:h-10 w-auto object-contain grayscale hover:grayscale-0"
+              height={50}
+              className="h-10 md:h-12 w-auto object-contain grayscale hover:grayscale-0"
               priority={i < 6} /* primeras imágenes priorizadas */
             />
           </div>

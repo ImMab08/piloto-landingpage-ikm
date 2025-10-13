@@ -10,6 +10,11 @@
         { "href": "/services", "text": "Services" },
         { "href": "/team", "text": "Team" }
       ],
+      "information": [
+        {"icon": "email", "title": "Contact us", "text": "service@ikm.com.co"},
+        {"icon": "phone", "title": "Call us", "text": "+57 (601) 123 4565"},
+        {"icon": "location", "title": "Location", "text": "Cl. 110 #9-25 – Bogotá, COL"}
+      ],
       "header_btnContac": { "href": "/contact", "text": "Contact us" },
       "titles": {
         "h2": "Expert management of",

@@ -8,7 +8,7 @@ export function AboutSection() {
   const cards = useTranslations("homePage.aboutSection.cards");
 
   return (
-    <section className="relative w-full flex items-center justify-center h-screen overflow-hidden">
+    <section className="relative w-full flex items-center justify-center h-full py-60 md:h-screen overflow-hidden">
       {/* FONDO con desvanecidos azules */}
       <div className="pointer-events-none absolute inset-0">
         {/* degradé general */}
@@ -23,7 +23,7 @@ export function AboutSection() {
 
           {/* COLUMNA IZQUIERDA: título y párrafo */}
           <div className="max-w-xl h-full flex flex-col justify-center">
-            <h2 className="font-oswald text-3xl sm:text-4xl lg:text-[44px] leading-12">
+            <h2 className="font-oswald text-4xl lg:text-[44px] leading-10 md:leading-12 max-w-96 md:max-w-full">
               {info.rich("title", {
                 hl: (chunks) => <span className="text-primary">{chunks}</span>,
               })}
@@ -34,11 +34,11 @@ export function AboutSection() {
           </div>
 
           {/* COLUMNA DERECHA: tarjetas superpuestas */}
-          <div className="relative h-[640px] md:h-[560px]">
+          <div className="relative flex flex-col gap-10 items-center h-auto md:h-[560px]">
 
             <article
               className="
-                absolute left-0 top-0 w-[370px] h-[260px]
+                md:absolute left-0 top-0 w-full md:w-[370px] h-[260px] hover:scale-105 duration-300
                 rounded-xl bg-background-secondary shadow-[0_4px_4px_rgba(0,0,0,0.2)]
                 p-6 flex flex-col justify-between
               "
@@ -62,7 +62,7 @@ export function AboutSection() {
 
             <article
               className="
-                absolute -right-22 top-48 w-[370px] h-[260px]
+                md:absolute -right-22 top-48 w-full md:w-[370px] h-[260px] hover:scale-105 duration-300
                 rounded-xl bg-background-secondary shadow-[0_4px_4px_rgba(0,0,0,0.2)]
                 p-6 flex flex-col justify-between
               "
@@ -86,7 +86,7 @@ export function AboutSection() {
 
             <article
               className="
-                absolute -left-12 -bottom-24 w-[370px] h-[260px]
+                md:absolute -left-12 -bottom-24 w-full md:w-[370px] h-[260px] hover:scale-105 duration-300
                 rounded-xl bg-background-secondary shadow-[0_4px_4px_rgba(0,0,0,0.2)]
                 p-6 flex flex-col justify-between
               "

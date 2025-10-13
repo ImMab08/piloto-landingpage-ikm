@@ -1,14 +1,17 @@
 "use client";
 import Image from "next/image";
-import { Button } from "@/components/ui/buttons/button";
-import { useTranslations } from "next-intl";
+import { useState, useEffect, JSX } from "react";
 import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
+
+import { Button } from "@/components/ui/buttons/button";
 import { ButtonLanguage } from "@/components/ui/buttons/button_language";
-import { IconArrowDown, IconCloseMenu, IconMenuBars } from "@/components/icons";
 import { LogosCarousel } from "@/components/ui/logos_carrousel";
-import { useState, useEffect } from "react";
+
+import { IconArrowDown, IconCloseMenu, IconLocate, IconMenuBars, IconPhone, IconSendEmail } from "@/components/icons";
 
 type NavItem = { href: string; text: string };
+type NavInformation = { icon: "email" | "phone" | "location"; title: string, text: string };
 
 export function HeroSection() {
   const [openMenu, setOpenMenu] = useState(false);
@@ -17,6 +20,13 @@ export function HeroSection() {
   const titles = useTranslations("homePage.hero.titles");
   const headerItems = t.raw("header") as NavItem[];
   const header_btnContac = t.raw("header_btnContac") as NavItem;
+  const header_itemsFormation = t.raw("information") as NavInformation[];
+
+  const iconsMap: Record<NavInformation["icon"], JSX.Element> = {
+    email: <IconSendEmail className="w-5 h-5" />,
+    phone: <IconPhone className="w-5 h-5" />,
+    location: <IconLocate className="w-5 h-5" />,
+  };
 
   // Desactivar scroll del body cuando el menú está abierto (Vista mobile).
   useEffect(() => {
@@ -45,15 +55,42 @@ export function HeroSection() {
         <div className="absolute right-0 top-0 h-full w-3/4 bg-primary text-white flex flex-col justify-between px-6 py-8 shadow-2xl">
           <div className="flex items-center justify-between mb-6">
             <IconCloseMenu
-              className="w-7 h-7 cursor-pointer"
+              className="w-7 h-7 cursor-pointer hover:text-text-secondary/70 duration-300"
               onClick={() => setOpenMenu(false)}
             />
             <ButtonLanguage />
           </div>
 
-          <Button variant="outline" className="mt-10">
-            <Link href={header_btnContac.href}>{header_btnContac.text}</Link>
-          </Button>
+          <nav className="flex flex-col gap-5">
+            {headerItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="text-lg text-surface duration-200 hover:scale-105 hover:bg-white hover:text-secondary hover:rounded-lg hover:py-2 hover:px-4 hover:duration-300"
+              >
+                {item.text}
+              </Link>
+            ))}
+          </nav>
+
+          <div className="w-full">
+
+            <div className="space-y-3 text-text-secondary">
+              {header_itemsFormation.map((item) => (
+                <div key={item.title} className="flex items-center space-x-2">
+                  <div className="border border-surface rounded-xl p-2">{iconsMap[item.icon]}</div>
+                  <div className="text-xs leading-4">
+                    <p className="">{item.title}</p>
+                    <p className="">{item.text}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            
+            <Button variant="outline" className="mt-10 w-full">
+              <Link href={header_btnContac.href}>{header_btnContac.text}</Link>
+            </Button>
+          </div>
         </div>
       </div>
 
@@ -72,14 +109,27 @@ export function HeroSection() {
         <div className="relative w-full h-full p-4 lg:py-4 lg:px-14">
           {/* Header */}
           <div className="flex w-full lg:flex-col lg:gap-0 space-y-3 lg:space-y-4">
-            <div className="">
-              <Image
-                width={256}
-                height={80}
-                alt="Logo IKM"
-                className="h-12 w-auto md:h-16 mr-20 lg:mr-0"
-                src="/images/logo_ikm_transparente.png"
-              />
+            <div className="flex justify-between">
+              <div>
+                <Image
+                  width={256}
+                  height={80}
+                  alt="Logo IKM"
+                  className="h-12 w-auto md:h-16 mr-20 lg:mr-0"
+                  src="/images/logo_ikm_transparente.png"
+                />
+              </div>
+              <div className="hidden lg:flex space-x-12 text-text-secondary">
+                {header_itemsFormation.map((item) => (
+                  <div key={item.title} className="flex items-center space-x-2">
+                    <div className="border border-surface rounded-xl p-2">{iconsMap[item.icon]}</div>
+                    <div className="text-xs leading-4">
+                      <p className="">{item.title}</p>
+                      <p className="">{item.text}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
 
             <header className="w-full h-12 md:h-16 mt-1 lg:mt-0 bg-surface/8 backdrop-blur-3xl rounded-lg px-5">
@@ -141,7 +191,7 @@ export function HeroSection() {
 
           {/* Logos */}
           <div className="absolute left-1/2 -bottom-16 -translate-x-1/2 w-[min(1100px,calc(100%-3.5rem))] z-20">
-            <p className="text-center text-white/90 text-sm md:text-base font-semibold mb-3">
+            <p className="text-center text-white/90 text-sm md:text-base font-semibold mb-3 px-20">
               {t("brandsTitle")}
             </p>
             <div className="rounded-xl bg-white/95 backdrop-blur border border-black/5 shadow-lg px-4 py-3">
