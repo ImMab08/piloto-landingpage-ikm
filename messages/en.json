@@ -11,9 +11,17 @@
         { "href": "/team", "text": "Team" }
       ],
       "information": [
-        {"icon": "email", "title": "Contact us", "text": "service@ikm.com.co"},
-        {"icon": "phone", "title": "Call us", "text": "+57 (601) 123 4565"},
-        {"icon": "location", "title": "Location", "text": "Cl. 110 #9-25 – Bogotá, COL"}
+        {
+          "icon": "email",
+          "title": "Contact us",
+          "text": "service@ikm.com.co"
+        },
+        { "icon": "phone", "title": "Call us", "text": "+57 (601) 123 4565" },
+        {
+          "icon": "location",
+          "title": "Location",
+          "text": "Cl. 110 #9-25 – Bogotá, COL"
+        }
       ],
       "header_btnContac": { "href": "/contact", "text": "Contact us" },
       "titles": {
@@ -43,41 +51,101 @@
           "more": "Learn more"
         }
       }
-    }
-  },
-  "useCases": {
-    "title": "Casos de uso",
-    "cases": [
-      {
-        "id": "ecopetrol",
-        "tab": "Ecopetrol",
-        "title": "Fábrica de gestión documental",
-        "description": "…tu párrafo…",
-        "image": "/images/uses_case/ecopetrol-bg.png",
-        "href": "/casos/ecopetrol",
-        "more": "Conoce más",
-        "metrics": [
-          { "value": "6 meses", "text": "Reducción de costos" },
-          { "value": "6 meses", "text": "Reducción de costos" },
-          { "value": "6 meses", "text": "Reducción de costos" },
-          { "value": "6 meses", "text": "Reducción de costos" }
-        ]
-      },
-      {
-        "id": "frontera",
-        "tab": "Frontera",
-        "title": "",
-        "description": "",
-        "image": "/images/uses_case/frontera.jpg",
-        "href": "/casos/frontera",
-        "more": "Conoce más",
-        "metrics": [
-          { "value": "", "text": "" },
-          { "value": "", "text": "" },
-          { "value": "", "text": "" },
-          { "value": "", "text": "" }
-        ]
+    },
+    "useCases": {
+      "title": "Use Cases",
+      "cases": [
+        {
+          "id": "ecopetrol",
+          "tab": "Ecopetrol",
+          "title": "Document Management Factory",
+          "description": "IKM partnered with ECOPETROL to develop a solid corporate strategy for the company’s 'Complex Construction and Infrastructure' division. Through our innovative service, we created a data analysis platform for oil and gas exploration and drilling that leverages advanced tools such as artificial intelligence and machine learning to completely transform the way industrial and infrastructure projects are built and operated.",
+          "image": "/images/uses_case/ecopetrol-bg.png",
+          "href": "/cases/ecopetrol",
+          "more": "Learn more",
+          "metrics": [
+            { "value": "6 months", "text": "Cost reduction" },
+            { "value": "6 months", "text": "Cost reduction" },
+            { "value": "6 months", "text": "Cost reduction" },
+            { "value": "6 months", "text": "Cost reduction" }
+          ]
+        },
+        {
+          "id": "frontera",
+          "tab": "Frontera",
+          "title": "Frontera",
+          "description": "Our service has significantly enhanced the company’s competitive advantage in key E&P areas as well as in its support departments. This proprietary model has been operating for more than a decade across all areas of the company, thanks to strong operations in multiple countries. IKM currently manages more than 4,000,000 documents and ensures that all corporate information is efficiently organized and easily accessible.",
+          "image": "/images/uses_case/frontera-bg.png",
+          "href": "/cases/frontera",
+          "more": "Learn more",
+          "metrics": [
+            { "value": "6 months", "text": "Cost reduction" },
+            { "value": "6 months", "text": "Cost reduction" },
+            { "value": "6 months", "text": "Cost reduction" },
+            { "value": "6 months", "text": "Cost reduction" }
+          ]
+        },
+        {
+          "id": "hocol",
+          "tab": "Hocol",
+          "title": "Hocol",
+          "description": "IKM successfully implemented Hocol’s 'Corporate Memory', a powerful tool that manages more than 1.5 million documents and facilitates internal communication among all departments, including suppliers, subcontractors, consultants, and stakeholders. With over 13 years of continuous service, our team has developed strong content management strategies and methodologies, enabling new technological capabilities that have transformed operations across the company.",
+          "image": "/images/uses_case/hocol-bg.png",
+          "href": "/cases/hocol",
+          "more": "Learn more",
+          "metrics": [
+            { "value": "6 months", "text": "Cost reduction" },
+            { "value": "6 months", "text": "Cost reduction" },
+            { "value": "6 months", "text": "Cost reduction" },
+            { "value": "6 months", "text": "Cost reduction" }
+          ]
+        },
+        {
+          "id": "minEnergias",
+          "tab": "Min. Mines and Energy",
+          "title": "Ministry of Mines and Energy",
+          "description": "Intelligent classification and data inventory identification of all well technical documents and seismic information from the National Petroleum Information Bank. Our service conducted a thorough and expert analysis of the integrity of Colombia’s exploratory and productive asset information.",
+          "image": "/images/uses_case/min-energias-bg.png",
+          "href": "/cases/min-energias",
+          "more": "Learn more",
+          "metrics": [
+            { "value": "6 months", "text": "Cost reduction" },
+            { "value": "6 months", "text": "Cost reduction" },
+            { "value": "6 months", "text": "Cost reduction" },
+            { "value": "6 months", "text": "Cost reduction" }
+          ]
+        }
+      ]
+    },
+    "stats": {
+      "items": [
+        {
+          "icon": "exp",
+          "value": "+20",
+          "label": "AÑOS DE EXPERIENCIA EN EL SECTOR DEL PETRÓLEO Y EL GAS"
+        },
+        {
+          "icon": "money",
+          "value": "+90mm USD",
+          "label": "AHORRO EN COSTES OPERATIVOS DIRECTOS"
+        },
+        {
+          "icon": "engineers",
+          "value": "+130",
+          "label": "INGENIEROS PETROLEROS INTERNOS DE IKM"
+        },
+        {
+          "icon": "exp2",
+          "value": "+20",
+          "label": "AÑOS DE EXPERIENCIA EN EL SECTOR DEL PETRÓLEO Y EL GAS"
+        }
+      ],
+      "advisory": {
+        "title": "Solicita una asesoría en las oficinas de su empresa.",
+        "body": "Centraliza y gestiona toda la documentación operativa, científica y normativa para E&P. Garantiza la precisión de los datos, el cumplimiento normativo y la preparación para auditorías, al tiempo que mitigas los riesgos de registros incompletos o pérdida de conocimientos técnicos.",
+        "ctaText": "Solicítalo aquí",
+        "ctaHref": "/contacto"
       }
-    ]
+    }
   }
 }

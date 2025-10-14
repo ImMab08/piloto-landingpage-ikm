@@ -8,17 +8,17 @@ export function AboutSection() {
   const cards = useTranslations("homePage.aboutSection.cards");
 
   return (
-    <section className="relative w-full flex items-center justify-center h-full py-60 md:h-screen overflow-x-hidden md:overflow-x-visible">
+    <section className="relative flex items-center justify-center h-full py-60 md:h-screen ">
       {/* FONDO con desvanecidos azules */}
       <div className="pointer-events-none absolute inset-0">
         {/* degradé general */}
         <div className="absolute inset-0 bg-gradient-to-br bg-surface" />
         {/* manchas suaves */}
         <div className="absolute top-60 right-96 h-72 w-72 rounded-full bg-primary/40 blur-[200px]" />
-        <div className="absolute bottom-28 left-1/3 h-80 w-80 rounded-full bg-primary/40 blur-[200px]" />
+        <div className="absolute bottom-28 left-0 md:left-1/3 h-80 w-80 rounded-full bg-primary/40 blur-[200px]" />
       </div>
 
-      <div className="relative mx-auto max-w-7xl px-6 md:px-10 lg:px-16 ">
+      <div className="relative mx-auto max-w-7xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 ">
 
           {/* COLUMNA IZQUIERDA: título y párrafo */}

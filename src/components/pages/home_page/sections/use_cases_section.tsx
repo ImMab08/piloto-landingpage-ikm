@@ -29,13 +29,13 @@ export function UseCasesSection() {
   return (
     <section className="relative w-full py-16 md:py-24">
       {/* Título */}
-      <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16">
+      <div className="max-w-7xl">
         <h2 className="font-oswald font-medium text-4xl md:text-5xl text-text-primary">
           {t("title")}
         </h2>
       </div>
 
-      <div className="mt-10 max-w-7xl mx-auto px-5 lg:px-16 grid gap-10 lg:grid-cols-[50px_1fr]">
+      <div className="mt-10 max-w-7xl grid gap-10 lg:grid-cols-[50px_1fr]">
         {/* Tabs (horizontales en mobile, verticales rotados en desktop) */}
         <div className="overflow-x-hidden">
           <div className="flex lg:flex-col gap-3 overflow-x-auto lg:overflow-visible pb-2 lg:pb-0">

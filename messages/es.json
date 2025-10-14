@@ -116,6 +116,36 @@
           ]
         }
       ]
+    },
+    "stats": {
+      "items": [
+        {
+          "icon": "exp",
+          "value": "+20",
+          "label": "AÑOS DE EXPERIENCIA EN EL SECTOR DEL PETRÓLEO Y EL GAS"
+        },
+        {
+          "icon": "money",
+          "value": "+90mm USD",
+          "label": "AHORRO EN COSTES OPERATIVOS DIRECTOS"
+        },
+        {
+          "icon": "engineers",
+          "value": "+130",
+          "label": "INGENIEROS PETROLEROS INTERNOS DE IKM"
+        },
+        {
+          "icon": "exp2",
+          "value": "+20",
+          "label": "AÑOS DE EXPERIENCIA EN EL SECTOR DEL PETRÓLEO Y EL GAS"
+        }
+      ],
+      "advisory": {
+        "title": "Solicita una asesoría en las oficinas de su empresa.",
+        "body": "Centraliza y gestiona toda la documentación operativa, científica y normativa para E&P. Garantiza la precisión de los datos, el cumplimiento normativo y la preparación para auditorías, al tiempo que mitigas los riesgos de registros incompletos o pérdida de conocimientos técnicos.",
+        "ctaText": "Solicítalo aquí",
+        "ctaHref": "/contacto"
+      }
     }
   }
 }

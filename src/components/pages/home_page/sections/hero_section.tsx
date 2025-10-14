@@ -190,8 +190,8 @@ export function HeroSection() {
           </div>
 
           {/* Logos */}
-          <div className="absolute left-1/2 -bottom-16 -translate-x-1/2 w-[min(1100px,calc(100%-3.5rem))] z-20">
-            <p className="text-center text-white/90 text-sm md:text-base font-semibold mb-3 px-20">
+          <div className="absolute left-1/2 -bottom-16 -translate-x-1/2 w-full px-6 md:px-36 z-20">
+            <p className="text-center text-white/90 text-sm md:text-base font-semibold mb-3 px-10 md:px-20">
               {t("brandsTitle")}
             </p>
             <div className="rounded-xl bg-white/95 backdrop-blur border border-black/5 shadow-lg px-4 py-3">
