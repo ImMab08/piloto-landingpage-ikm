@@ -85,7 +85,7 @@ export function ConsultingSection() {
             {/* fondo imagen + overlay oscuro */}
             <div className="absolute inset-0 -z-10">
               <Image
-                src="/images/consulting-bg.jpg"
+                src="/images/svg/consulting-bg.jpg"
                 alt=""
                 fill
                 className="object-cover blur-xs"

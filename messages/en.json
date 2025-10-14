@@ -147,5 +147,106 @@
         "ctaHref": "/contacto"
       }
     }
+  },
+  "footer": {
+    "newsletter": {
+      "title": "Deja tu correo",
+      "subtitle": "y nosotros te contactamos",
+      "placeholder": "ejemplo@correo.com",
+      "button": "Enviar"
+    },
+
+    "about": {
+      "text": "Ayudamos a nuestros clientes a diseñar mejor y escalar más rápido con un servicio de diseño escalable, flexible y asequible.",
+      "cta": "¡Solicita una visita hoy mismo!"
+    },
+
+    "nav": {
+      "columns": [
+        {
+          "title": "IKM",
+          "links": [
+            { "label": "Inicio", "href": "/" },
+            { "label": "Servicios", "href": "/servicios" },
+            { "label": "Equipo", "href": "/equipo" },
+            { "label": "Casos de uso", "href": "/casos" },
+            { "label": "Nuestra historia", "href": "/historia" },
+            { "label": "Agenda una reunión", "href": "/agenda" }
+          ],
+          "sub": [
+            { "label": "Ecopetrol", "href": "/casos/ecopetrol" },
+            { "label": "Hocol", "href": "/casos/hocol" },
+            { "label": "Frontera", "href": "/casos/frontera" },
+            { "label": "BIPE", "href": "/casos/bipe" },
+            {
+              "label": "Ministerio de minas y energías",
+              "href": "/casos/min-energias"
+            }
+          ]
+        },
+        {
+          "title": "Recursos",
+          "links": [
+            { "label": "IKM para empresas", "href": "/recursos/empresas" },
+            { "label": "IKM latinoamérica", "href": "/recursos/latam" },
+            { "label": "IKM norteamérica", "href": "/recursos/na" },
+            {
+              "label": "¿Por qué elegirnos?",
+              "href": "/recursos/por-que-elegirnos"
+            },
+            { "label": "Preguntas frecuentes", "href": "/faq" },
+            { "label": "Blog", "href": "/blog" }
+          ]
+        },
+        {
+          "title": "Servicios",
+          "links": [
+            { "label": "IKM para empresas", "href": "/servicios/empresas" },
+            { "label": "IKM latinoamérica", "href": "/servicios/latam" },
+            { "label": "IKM norteamérica", "href": "/servicios/na" },
+            {
+              "label": "¿Por qué elegirnos?",
+              "href": "/servicios/por-que-elegirnos"
+            },
+            { "label": "Preguntas frecuentes", "href": "/faq" },
+            { "label": "Blog", "href": "/blog" }
+          ]
+        }
+      ]
+    },
+
+    "feature": {
+      "title": "IKM Revolución digital",
+      "description": "IKM se asoció con ECOPETROL para desarrollar una sólida estrategia corporativa para la división «Construcción e Infraestructura Compleja» de la empresa. A través de nuestro innovador servicio, creamos una plataforma de análisis de datos de exploración y perforación de petróleo y gas que utiliza herramientas avanzadas, como la inteligencia artificial y el aprendizaje automático, para transformar por completo la forma en que se construyen y operan los proyectos industriales y de infraestructura.",
+      "cta": "Consulta todos nuestros servicios"
+    },
+
+    "contact": {
+      "cards": [
+        {
+          "title": "Llámanos",
+          "text": "+57 (601) 123 4565",
+          "icon": "phone"
+        },
+        {
+          "title": "Contáctanos",
+          "text": "servicio@ikm.com.co",
+          "icon": "email"
+        },
+        {
+          "title": "Ubicación",
+          "text": "Cl. 110 #9-25 – Bogotá, COL",
+          "icon": "location"
+        }
+      ]
+    },
+
+    "bottom": {
+      "copyright": "© IKM - 2025, Todos los derechos reservados · IKM Information and Knowledge Management S.A.S",
+      "links": [
+        { "label": "Términos y condiciones", "href": "/terminos" },
+        { "label": "Políticas de privacidad", "href": "/privacidad" }
+      ]
+    }
   }
 }

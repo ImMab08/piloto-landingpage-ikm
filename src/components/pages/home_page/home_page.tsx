@@ -2,6 +2,7 @@ import { AboutSection } from "./sections/about_section";
 import { HeroSection } from "./sections/hero_section";
 import { ConsultingSection } from "./sections/consulting_section";
 import { UseCasesSection } from "./sections/use_cases_section";
+import { Footer } from "@/components/shared/footer";
 
 export function HomePage() {
   return (
@@ -12,6 +13,8 @@ export function HomePage() {
         <UseCasesSection />
         <ConsultingSection />
       </div>
+      
+      <Footer />
     </section>
   );
 }
