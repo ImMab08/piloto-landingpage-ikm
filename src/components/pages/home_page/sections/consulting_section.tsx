@@ -39,7 +39,7 @@ export function ConsultingSection() {
   };
 
   return (
-    <section className="relative w-full flex items-center h-screen py-16 md:py-24 ">
+    <section className="relative w-full flex items-center justify-center h-screen py-16 md:py-24">
       <div className="absolute inset-0 flex justify-end pointer-events-none select-none -z-10">
         <div className="relative top-[-18%] right-[-10%] md:top-[-35%] md:right-[-20%] rotate-[3deg] opacity-60 w-[110%] max-w-[900px]">
           <Image
@@ -53,7 +53,7 @@ export function ConsultingSection() {
         </div>
       </div>
 
-      <div className="max-w-7xl ">
+      <div className="w-full">
         <div className="grid gap-6 md:gap-8 md:grid-cols-[1fr_1fr_415px]">
           {/* === GRID DE MÉTRICAS === */}
           <div className="grid gap-6 md:gap-8 grid-cols-2 md:col-span-2 justify-items-start">

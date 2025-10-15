@@ -8,7 +8,7 @@ export function AboutSection() {
   const cards = useTranslations("homePage.aboutSection.cards");
 
   return (
-    <section className="relative flex items-center justify-center h-full py-60 md:h-screen ">
+    <section className="relative flex items-center justify-center h-full py-48 md:py-60 md:h-screen ">
       {/* FONDO con desvanecidos azules */}
       <div className="pointer-events-none absolute inset-0">
         {/* degradé general */}
@@ -28,13 +28,13 @@ export function AboutSection() {
                 hl: (chunks) => <span className="text-primary">{chunks}</span>,
               })}
             </h2>
-            <p className="mt-5 text-base max-w-md leading-6 text-text-tertiary">
+            <p className="mt-5 text-base max-w-md leading-6 text-text-tertiary text-justify">
               {info("description")}
             </p>
           </div>
 
           {/* COLUMNA DERECHA: tarjetas superpuestas */}
-          <div className="relative flex flex-col gap-10 items-center h-auto md:h-[560px]">
+          <div className="relative flex flex-col gap-10 items-center h-auto md:h-[560px] text-justify">
 
             <article
               className="

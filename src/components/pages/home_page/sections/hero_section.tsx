@@ -13,7 +13,7 @@ export function HeroSection() {
   const titles = useTranslations("homePage.hero.titles");
 
   return (
-    <section className="relative w-full h-screen font-lato font-light text-lg">
+    <section id="hero" className="relative w-full h-screen font-lato font-light text-lg">
       <Image
         fill
         priority
@@ -24,11 +24,11 @@ export function HeroSection() {
       />
       <div className="absolute inset-0 bg-accent-foreground/80" />
 
-      <div className="relative w-full h-full p-4 lg:py-4 lg:px-14">
+      <div className="relative w-full h-full flex items-center justify-centers p-4 lg:py-4 lg:px-14">
         <Header />
 
         {/* Contenido principal */}
-        <div className="flex-1 flex flex-col items-center justify-center px-6 mt-48 gap-5">
+        <div className="flex-1 flex flex-col items-center justify-center px-6  gap-5">
           <div className="text-center max-w-4xl mx-auto space-y-2">
             <h2 className="text-surface/95 text-3xl md:text-5xl font-medium font-oswald">
               {titles("h2")}
@@ -52,7 +52,7 @@ export function HeroSection() {
         </div>
 
         {/* Logos */}
-        <div className="absolute left-1/2 -bottom-16 -translate-x-1/2 w-full px-6 md:px-36 z-20">
+        <div className="absolute left-1/2 -bottom-16 -translate-x-1/2 w-full px-6 md:px-36 2xl:px-96 z-20">
           <p className="text-center text-white/90 text-sm md:text-base font-semibold mb-3 px-10 md:px-20">
             {t("brandsTitle")}
           </p>

@@ -39,8 +39,8 @@ export function Footer() {
   };
 
   return (
-    <footer className="bg-secondary text-white pt-12 md:pt-16 px-6 md:px-36">
-      <div className="max-w-7xl">
+    <footer className="bg-secondary text-white pt-12 md:pt-16 px-6 md:px-36 2xl:px-96">
+      <div className="">
         {/* Top: branding + newsletter */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
           <div className="space-y-5">

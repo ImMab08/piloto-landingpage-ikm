@@ -27,7 +27,7 @@ export function UseCasesSection() {
   const current = items[active];
 
   return (
-    <section className="relative w-full py-16 md:py-24">
+    <section className="relative w-full flex flex-col justify-center py-16 md:py-24">
       {/* Título */}
       <div className="max-w-7xl">
         <h2 className="font-oswald font-medium text-4xl md:text-5xl text-text-primary">
@@ -81,7 +81,7 @@ export function UseCasesSection() {
                 {current.title}
               </h3>
 
-              <p className="text-text-tertiary leading-6 max-w-prose">
+              <p className="text-text-tertiary leading-6 max-w-prose text-justify">
                 {current.description}
               </p>
 
