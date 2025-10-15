@@ -15,10 +15,10 @@
         "title": "Contactanos",
         "text": "service@ikm.com.co"
       },
-      { 
-        "icon": "phone", 
-        "title": "Llamanos", 
-        "text": "+57 (601) 123 4565" 
+      {
+        "icon": "phone",
+        "title": "Llamanos",
+        "text": "+57 (601) 123 4565"
       },
       {
         "icon": "location",
@@ -152,6 +152,11 @@
         "ctaText": "Solicítalo aquí",
         "ctaHref": "/contacto"
       }
+    },
+    "discover_section": {
+      "title": "Conoce también",
+      "description": "Deja que tu información impulse su estrategia corporativa.",
+      "src": "https://www.youtube-nocookie.com/embed/L6alEXPfqYI"
     }
   },
   "footer": {
@@ -225,8 +230,8 @@
     },
 
     "feature": {
-      "title": "IKM Revolución digital",
-      "description": "IKM se asoció con ECOPETROL para desarrollar una sólida estrategia corporativa para la división «Construcción e Infraestructura Compleja» de la empresa. A través de nuestro innovador servicio, creamos una plataforma de análisis de datos de exploración y perforación de petróleo y gas que utiliza herramientas avanzadas, como la inteligencia artificial y el aprendizaje automático, para transformar por completo la forma en que se construyen y operan los proyectos industriales y de infraestructura.",
+      "title": "IKM, Transformando conocimiento en innovación",
+      "description": "En IKM impulsamos la transformación digital a través de soluciones tecnológicas inteligentes que integran datos, personas y procesos. Combinamos experiencia en ingeniería, gestión de la información y análisis avanzado de datos para ayudar a las organizaciones a tomar decisiones estratégicas, seguras y basadas en evidencia. Nuestro compromiso con la innovación nos permite diseñar plataformas personalizadas que optimizan el flujo de información, potencian la eficiencia operativa y promueven la sostenibilidad. En IKM, convertimos el conocimiento en un activo tangible que impulsa el progreso y la competitividad de nuestros clientes en los sectores más exigentes de la industria.",
       "cta": "Consulta todos nuestros servicios"
     },
 

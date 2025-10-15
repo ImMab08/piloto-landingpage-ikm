@@ -60,7 +60,7 @@ export function Footer() {
               />
             </div>
 
-            <p className="text-text-secondary font-semibold	text-lg max-w-[40ch] leading-6">
+            <p className="text-text-secondary text-justify font-semibold	text-lg max-w-[40ch] leading-6">
               {t("about.text")}
             </p>
             <p className="font-extrabold text-lg">{t("about.cta")}</p>
@@ -143,7 +143,7 @@ export function Footer() {
         <hr className="my-8 md:my-10 border-2 border-white" />
 
         {/* Feature + contacto compacto */}
-        <div className="grid lg:grid-cols-[1fr_360px] gap-10 items-end mb-8">
+        <div className="grid lg:grid-cols-[1fr_360px] gap-6 md:gap-10 items-center mb-8">
           <div className="">
             <h4 className="font-oswald text-2xl md:text-3xl text-accent mb-3">
               {t("feature.title")}
@@ -153,8 +153,8 @@ export function Footer() {
             </p>
           </div>
 
-          {/* Cards (re-uso) */}
-          <div className="flex flex-col space-y-4 space-x-12 text-text-secondary pb-0 md:pb-4">
+          {/* Cards */}
+          <div className="flex flex-col space-y-4 space-x-12 text-text-secondary pt-0 md:pt-8">
             {headerContact.map((item) => (
               <div key={item.title} className="flex items-center space-x-2">
                 <div className="border border-surface rounded-xl p-2">
@@ -189,7 +189,7 @@ export function Footer() {
           <div className="flex flex-col md:flex-row items-center space-y-5 md:space-y-0 space-x-5">
             <div className="flex items-center gap-4">
               <Link
-                href="https://facebook.com"
+                href="https://www.facebook.com/IKM.information/"
                 aria-label="Facebook"
                 className="rounded-full border border-surface bg-surface/5 p-2 hover:bg-surface/40"
               >
@@ -201,7 +201,7 @@ export function Footer() {
                 />
               </Link>
               <Link
-                href="https://instagram.com"
+                href="https://www.instagram.com/ikm_information/?igshid=YmMyMTA2M2Y%3D"
                 aria-label="Instagram"
                 className="rounded-full border border-surface bg-surface/5 p-2 hover:bg-surface/40"
               >
@@ -213,7 +213,7 @@ export function Footer() {
                 />
               </Link>
               <Link
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/company/ikmempresa"
                 aria-label="LinkedIn"
                 className="rounded-full border border-surface bg-surface/5 p-2 hover:bg-surface/40"
               >
@@ -235,9 +235,9 @@ export function Footer() {
           </div>
 
           <div className="flex items-center gap-6 text-sm text-text-secondary">
-            {bottomLinks.map((l) => (
-              <Link key={l.href} href={l.href} className="hover:underline">
-                {l.label}
+            {bottomLinks.map((link) => (
+              <Link key={link.href} href={link.href} className="hover:underline">
+                {link.label}
               </Link>
             ))}
           </div>

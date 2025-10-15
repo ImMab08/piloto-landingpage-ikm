@@ -3,27 +3,33 @@
     "en": "English",
     "es": "Spanish"
   },
+  "header": {
+    "links": [
+      { "href": "/", "text": "Inicio" },
+      { "href": "/servicios", "text": "Servicios" },
+      { "href": "/equipo", "text": "Equipo" }
+    ],
+    "contact": [
+      {
+        "icon": "email",
+        "title": "Contactanos",
+        "text": "service@ikm.com.co"
+      },
+      {
+        "icon": "phone",
+        "title": "Llamanos",
+        "text": "+57 (601) 123 4565"
+      },
+      {
+        "icon": "location",
+        "title": "Ubicación",
+        "text": "Cl. 110 #9-25 – Bogotá, COL"
+      }
+    ],
+    "btnContac": { "href": "/contacto", "text": "Contactanos" }
+  },
   "homePage": {
     "hero": {
-      "header": [
-        { "href": "/", "text": "Home" },
-        { "href": "/services", "text": "Services" },
-        { "href": "/team", "text": "Team" }
-      ],
-      "information": [
-        {
-          "icon": "email",
-          "title": "Contact us",
-          "text": "service@ikm.com.co"
-        },
-        { "icon": "phone", "title": "Call us", "text": "+57 (601) 123 4565" },
-        {
-          "icon": "location",
-          "title": "Location",
-          "text": "Cl. 110 #9-25 – Bogotá, COL"
-        }
-      ],
-      "header_btnContac": { "href": "/contact", "text": "Contact us" },
       "titles": {
         "h2": "Expert management of",
         "h1": "OIL DATA",
@@ -146,19 +152,24 @@
         "ctaText": "Solicítalo aquí",
         "ctaHref": "/contacto"
       }
+    },
+    "discover_section": {
+      "title": "Discover more",
+      "description": "Empower your corporate strategy through information.",
+      "src": "https://www.youtube-nocookie.com/embed/L6alEXPfqYI"
     }
   },
   "footer": {
     "newsletter": {
-      "title": "Deja tu correo",
-      "subtitle": "y nosotros te contactamos",
-      "placeholder": "ejemplo@correo.com",
-      "button": "Enviar"
+      "title": "Leave your email and",
+      "subtitle": "we will contact you",
+      "placeholder": "example@email.com",
+      "button": "Send"
     },
 
     "about": {
-      "text": "Ayudamos a nuestros clientes a diseñar mejor y escalar más rápido con un servicio de diseño escalable, flexible y asequible.",
-      "cta": "¡Solicita una visita hoy mismo!"
+      "text": "We help our clients design better and scale faster with a scalable, flexible, and affordable design service.",
+      "cta": "Request a visit today!"
     },
 
     "nav": {
@@ -166,49 +177,52 @@
         {
           "title": "IKM",
           "links": [
-            { "label": "Inicio", "href": "/" },
-            { "label": "Servicios", "href": "/servicios" },
-            { "label": "Equipo", "href": "/equipo" },
-            { "label": "Casos de uso", "href": "/casos" },
-            { "label": "Nuestra historia", "href": "/historia" },
-            { "label": "Agenda una reunión", "href": "/agenda" }
-          ],
-          "sub": [
-            { "label": "Ecopetrol", "href": "/casos/ecopetrol" },
-            { "label": "Hocol", "href": "/casos/hocol" },
-            { "label": "Frontera", "href": "/casos/frontera" },
-            { "label": "BIPE", "href": "/casos/bipe" },
+            { "label": "Home", "href": "/" },
+            { "label": "Services", "href": "/services" },
+            { "label": "Team", "href": "/team" },
             {
-              "label": "Ministerio de minas y energías",
-              "href": "/casos/min-energias"
-            }
+              "label": "Use cases",
+              "href": "/cases",
+              "subLinks": [
+                { "label": "Ecopetrol", "href": "/cases/ecopetrol" },
+                { "label": "Hocol", "href": "/cases/hocol" },
+                { "label": "Frontera", "href": "/cases/frontera" },
+                { "label": "BIPE", "href": "/cases/bipe" },
+                {
+                  "label": "Ministry of Mines and Energy",
+                  "href": "/cases/min-energy"
+                }
+              ]
+            },
+            { "label": "Our history", "href": "/history" },
+            { "label": "Schedule a meeting", "href": "/schedule" }
           ]
         },
         {
-          "title": "Recursos",
+          "title": "Resources",
           "links": [
-            { "label": "IKM para empresas", "href": "/recursos/empresas" },
-            { "label": "IKM latinoamérica", "href": "/recursos/latam" },
-            { "label": "IKM norteamérica", "href": "/recursos/na" },
+            { "label": "IKM for companies", "href": "/resources/companies" },
+            { "label": "IKM Latin America", "href": "/resources/latam" },
+            { "label": "IKM North America", "href": "/resources/na" },
             {
-              "label": "¿Por qué elegirnos?",
-              "href": "/recursos/por-que-elegirnos"
+              "label": "Why choose us?",
+              "href": "/resources/why-choose-us"
             },
-            { "label": "Preguntas frecuentes", "href": "/faq" },
+            { "label": "Frequently asked questions", "href": "/faq" },
             { "label": "Blog", "href": "/blog" }
           ]
         },
         {
-          "title": "Servicios",
+          "title": "Services",
           "links": [
-            { "label": "IKM para empresas", "href": "/servicios/empresas" },
-            { "label": "IKM latinoamérica", "href": "/servicios/latam" },
-            { "label": "IKM norteamérica", "href": "/servicios/na" },
+            { "label": "IKM for companies", "href": "/services/companies" },
+            { "label": "IKM Latin America", "href": "/services/latam" },
+            { "label": "IKM North America", "href": "/services/na" },
             {
-              "label": "¿Por qué elegirnos?",
-              "href": "/servicios/por-que-elegirnos"
+              "label": "Why choose us?",
+              "href": "/services/why-choose-us"
             },
-            { "label": "Preguntas frecuentes", "href": "/faq" },
+            { "label": "Frequently asked questions", "href": "/faq" },
             { "label": "Blog", "href": "/blog" }
           ]
         }
@@ -216,25 +230,25 @@
     },
 
     "feature": {
-      "title": "IKM Revolución digital",
-      "description": "IKM se asoció con ECOPETROL para desarrollar una sólida estrategia corporativa para la división «Construcción e Infraestructura Compleja» de la empresa. A través de nuestro innovador servicio, creamos una plataforma de análisis de datos de exploración y perforación de petróleo y gas que utiliza herramientas avanzadas, como la inteligencia artificial y el aprendizaje automático, para transformar por completo la forma en que se construyen y operan los proyectos industriales y de infraestructura.",
-      "cta": "Consulta todos nuestros servicios"
+      "title": "IKM, Transforming Knowledge into Innovation",
+      "description": "At IKM, we drive digital transformation through intelligent technological solutions that connect data, people, and processes. We combine expertise in engineering, information management, and advanced data analytics to help organizations make strategic, secure, and evidence-based decisions. Our commitment to innovation enables us to design customized platforms that optimize information flow, enhance operational efficiency, and promote sustainability. At IKM, we turn knowledge into a tangible asset that fuels progress and strengthens our clients’ competitiveness across the most demanding industrial sectors.",
+      "cta": "See all our services"
     },
 
     "contact": {
       "cards": [
         {
-          "title": "Llámanos",
+          "title": "Call us",
           "text": "+57 (601) 123 4565",
           "icon": "phone"
         },
         {
-          "title": "Contáctanos",
-          "text": "servicio@ikm.com.co",
+          "title": "Contact us",
+          "text": "service@ikm.com.co",
           "icon": "email"
         },
         {
-          "title": "Ubicación",
+          "title": "Location",
           "text": "Cl. 110 #9-25 – Bogotá, COL",
           "icon": "location"
         }
@@ -242,10 +256,11 @@
     },
 
     "bottom": {
-      "copyright": "© IKM - 2025, Todos los derechos reservados · IKM Information and Knowledge Management S.A.S",
+      "copyright": "© IKM - 2025, All rights reserved.",
+      "ikm": "IKM Information and Knowledge Management S.A.S",
       "links": [
-        { "label": "Términos y condiciones", "href": "/terminos" },
-        { "label": "Políticas de privacidad", "href": "/privacidad" }
+        { "label": "Terms and conditions", "href": "/terms" },
+        { "label": "Privacy policy", "href": "/privacy" }
       ]
     }
   }

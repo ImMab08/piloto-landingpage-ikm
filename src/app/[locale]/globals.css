@@ -87,11 +87,3 @@
   0%   { transform: translateX(0); }
   100% { transform: translateX(-50%); } /* avanza el ancho de un set */
 }
-
-/* Si el usuario prefiere menos movimiento, detén la animación */
-@media (prefers-reduced-motion: reduce) {
-  .marquee {
-    animation-play-state: paused !important;
-  }
-}
-

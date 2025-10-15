@@ -1,7 +1,11 @@
-import { AboutSection } from "./sections/about_section";
 import { HeroSection } from "./sections/hero_section";
-import { ConsultingSection } from "./sections/consulting_section";
+
+import { AboutSection } from "./sections/about_section";
 import { UseCasesSection } from "./sections/use_cases_section";
+import { ConsultingSection } from "./sections/consulting_section";
+import { DiscoverSection } from "./sections/discover_section";
+import { ClientsSection } from "./sections/clients_section";
+
 import { Footer } from "@/components/shared/footer";
 
 export function HomePage() {
@@ -13,6 +17,8 @@ export function HomePage() {
         <UseCasesSection />
         <ConsultingSection />
       </div>
+      <DiscoverSection />
+      <ClientsSection />
       
       <Footer />
     </section>
