@@ -44,7 +44,7 @@ export function ConsultingSection() {
         <div className="relative top-[-18%] right-[-10%] md:top-[-35%] md:right-[-20%] rotate-[3deg] opacity-60 w-[110%] max-w-[900px]">
           <Image
             alt=""
-            src="/images/mundo-bg.svg"
+            src="/images/svg/mundo-bg.svg"
             width={900}
             height={600}
             priority
@@ -85,7 +85,7 @@ export function ConsultingSection() {
             {/* fondo imagen + overlay oscuro */}
             <div className="absolute inset-0 -z-10">
               <Image
-                src="/images/svg/consulting-bg.jpg"
+                src="/images/consulting-bg.jpg"
                 alt=""
                 fill
                 className="object-cover blur-xs"

@@ -3,27 +3,33 @@
     "en": "Inglés",
     "es": "Español"
   },
+  "header": {
+    "links": [
+      { "href": "/", "text": "Inicio" },
+      { "href": "/servicios", "text": "Servicios" },
+      { "href": "/equipo", "text": "Equipo" }
+    ],
+    "contact": [
+      {
+        "icon": "email",
+        "title": "Contactanos",
+        "text": "service@ikm.com.co"
+      },
+      { 
+        "icon": "phone", 
+        "title": "Llamanos", 
+        "text": "+57 (601) 123 4565" 
+      },
+      {
+        "icon": "location",
+        "title": "Ubicación",
+        "text": "Cl. 110 #9-25 – Bogotá, COL"
+      }
+    ],
+    "btnContac": { "href": "/contacto", "text": "Contactanos" }
+  },
   "homePage": {
     "hero": {
-      "header": [
-        { "href": "/", "text": "Inicio" },
-        { "href": "/servicios", "text": "Servicios" },
-        { "href": "/equipo", "text": "Equipo" }
-      ],
-      "information": [
-        {
-          "icon": "email",
-          "title": "Contactanos",
-          "text": "service@ikm.com.co"
-        },
-        { "icon": "phone", "title": "Llamanos", "text": "+57 (601) 123 4565" },
-        {
-          "icon": "location",
-          "title": "Ubicación",
-          "text": "Cl. 110 #9-25 – Bogotá, COL"
-        }
-      ],
-      "header_btnContac": { "href": "/contacto", "text": "Contactanos" },
       "titles": {
         "h2": "Gestión experta de",
         "h1": "DATOS PETROLEROS",

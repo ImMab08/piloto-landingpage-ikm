@@ -2,18 +2,19 @@
 
 import Image from "next/image";
 import Link from "next/link";
+
 import { JSX, useState } from "react";
 import { useTranslations } from "next-intl";
-import { IconLocate, IconPhone, IconSendEmail } from "../icons";
 
-type NavInformation = {
-  icon: "email" | "phone" | "location";
-  title: string;
-  text: string;
-};
+import { HeaderContact } from "@/types/types";
+import { IconLocate, IconPhone, IconSendEmail } from "@/components/icons";
 
 export function Footer() {
   const t = useTranslations("footer");
+
+  const header = useTranslations("header");
+  const headerContact = header.raw("contact") as HeaderContact[];
+
   const [email, setEmail] = useState("");
 
   // Traer arrays desde i18n
@@ -25,17 +26,13 @@ export function Footer() {
       subLinks?: { label: string; href: string }[];
     }[];
   }>;
-  const contactCards = t.raw("contact.cards") as Array<{
-    title: string;
-    text: string;
-    icon: "email" | "phone" | "location";
-  }>;
+
   const bottomLinks = t.raw("bottom.links") as Array<{
     label: string;
     href: string;
   }>;
 
-  const iconsMap: Record<NavInformation["icon"], JSX.Element> = {
+  const iconsMap: Record<HeaderContact["icon"], JSX.Element> = {
     email: <IconSendEmail className="w-5 h-5" />,
     phone: <IconPhone className="w-5 h-5" />,
     location: <IconLocate className="w-5 h-5" />,
@@ -146,7 +143,7 @@ export function Footer() {
         <hr className="my-8 md:my-10 border-2 border-white" />
 
         {/* Feature + contacto compacto */}
-        <div className="grid lg:grid-cols-[1fr_360px] gap-10 items-start">
+        <div className="grid lg:grid-cols-[1fr_360px] gap-10 items-end mb-8">
           <div className="">
             <h4 className="font-oswald text-2xl md:text-3xl text-accent mb-3">
               {t("feature.title")}
@@ -157,14 +154,17 @@ export function Footer() {
           </div>
 
           {/* Cards (re-uso) */}
-          <div className="grid gap-4 mb-8">
-            {contactCards.map((c, i) => (
-              <ContactCard
-                key={`feature-${i}`}
-                icon={iconsMap[c.icon as NavInformation["icon"]]}
-                title={c.title}
-                text={c.text}
-              />
+          <div className="flex flex-col space-y-4 space-x-12 text-text-secondary pb-0 md:pb-4">
+            {headerContact.map((item) => (
+              <div key={item.title} className="flex items-center space-x-2">
+                <div className="border border-surface rounded-xl p-2">
+                  {iconsMap[item.icon]}
+                </div>
+                <div className="text-xs leading-4">
+                  <p className="">{item.title}</p>
+                  <p className="">{item.text}</p>
+                </div>
+              </div>
             ))}
           </div>
         </div>
@@ -227,7 +227,9 @@ export function Footer() {
             </div>
 
             <div className="text-center md:text-left">
-              <p className="text-sm text-text-secondary">{t("bottom.copyright")}</p>
+              <p className="text-sm text-text-secondary">
+                {t("bottom.copyright")}
+              </p>
               <p className="text-xs text-text-tertiary">{t("bottom.ikm")}</p>
             </div>
           </div>
@@ -242,26 +244,5 @@ export function Footer() {
         </div>
       </div>
     </footer>
-  );
-}
-
-/* ---------- Subcomponente ---------- */
-function ContactCard({
-  icon,
-  title,
-  text,
-}: {
-  icon: React.ReactNode;
-  title: string;
-  text: string;
-}) {
-  return (
-    <div className="flex items-start gap-3 rounded-lg bg-white/5 ring-1 ring-white/10 px-4 py-3">
-      <div className="text-white/90">{icon}</div>
-      <div className="text-sm">
-        <p className="font-semibold text-white">{title}</p>
-        <p className="text-white/80">{text}</p>
-      </div>
-    </div>
   );
 }
