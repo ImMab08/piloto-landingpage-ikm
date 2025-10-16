@@ -33,8 +33,8 @@ export function ConsultingSection() {
   };
 
   return (
-    <section className="relative w-full flex items-center justify-center h-screen py-16 md:pt-24">
-      <div className="absolute inset-0 pointer-events-none select-none -z-10 ">
+    <section className="relative w-full flex items-center justify-center h-screen py-16 mt-20 md:pt-24">
+      <div className="absolute inset-0 pointer-events-none select-none -z-20 ">
         <div className="absolute top-[-18%] md:top-[-28%] right-0 md:rotate-[6deg] opacity-60 w-full max-w-[900px]">
           <Image
             alt=""
@@ -49,9 +49,8 @@ export function ConsultingSection() {
 
       <div className="w-full">
         <div className="grid gap-6 md:gap-8 md:grid-cols-[1fr_1fr_415px]">
-          {/* === GRID DE MÉTRICAS === */}
           <div className="grid gap-6 md:gap-8 grid-cols-2 md:col-span-2 justify-items-start">
-            {stats.map((s, i) => (
+            {stats.map((stat, i) => (
               <article
                 key={i}
                 className="rounded-2xl md:w-[300px] md:h-[215px] bg-background-secondary/90 shadow-[0_6px_16px_rgba(0,0,0,0.08)] p-5 md:p-6 hover:scale-105 duration-300 cursor-default"
@@ -59,22 +58,21 @@ export function ConsultingSection() {
                 <div className="flex flex-col items-start gap-3 text-purple">
                   <div className="flex items-center space-x-2">
                     <div className="w-10 h-10 md:w-14 md:h-14 flex items-center justify-center p-2 rounded-full bg-purple/20">
-                      <div>{ICONS[s.icon]}</div>
+                      <div>{ICONS[stat.icon]}</div>
                     </div>
                     <p className="font-oswald font-medium text-xl md:text-3xl text-purple">
-                      {s.value}
+                      {stat.value}
                     </p>
                   </div>
 
                   <p className="font-oswald font-medium text-text-tertiary text-base md:text-xl leading-5 md:leading-7 max-w-[26ch]">
-                    {s.label}
+                    {stat.label}
                   </p>
                 </div>
               </article>
             ))}
           </div>
 
-          {/* === PANEL ASESORÍA === */}
           <aside className="relative rounded-2xl overflow-hidden md:row-span-2 w-full md:w-[415px] h-[400px] md:h-[500px]">
             {/* fondo imagen + overlay oscuro */}
             <div className="absolute inset-0 -z-10">
@@ -94,7 +92,7 @@ export function ConsultingSection() {
                   {advisory.title}
                 </h3>
 
-                <p className="text-white text-sm leading-4">{advisory.body}</p>
+                <p className="text-white text-sm text-justify leading-4">{advisory.body}</p>
               </div>
 
               <div className="mt-2">

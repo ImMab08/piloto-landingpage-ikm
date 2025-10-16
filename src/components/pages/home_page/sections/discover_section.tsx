@@ -1,51 +1,38 @@
 "use client";
 import { useTranslations } from "next-intl";
-import Image from "next/image";
 import React from "react";
 
 export function DiscoverSection() {
   const t = useTranslations("homePage.discover_section");
 
   return (
-    <section className="relative w-full h-screen items-center justify-center md:pt-[350px] text-white px-6 md:px-36">
-      {/* Fondo SVG */}
-      <div className="absolute inset-0 -z-10">
-        <Image
-          width={1600}
-          height={840}
-          src="/images/svg/discover_bg_desktop.svg"
-          alt="Background diagonal IKM"
-          className="object-cover hidden md:block"
-          priority
-        />
-        <Image
-          width={840}
-          height={440}
-          src="/images/svg/discover_bg_mobile.svg"
-          alt="Background diagonal IKM"
-          className="object-cover block md:hidden"
-          priority
+    // OJO: overflow-visible para que el fondo se desborde fuera del section
+    <section className="relative w-full h-screen overflow-visible text-white ">
+      <div className="absolute -inset-x-[100%] -inset-y-[10%] -z-10 pointer-events-none select-none">
+        {/* Parche azul recortado con clip-path para formar el “triángulo invertido” */}
+        <div
+          className="
+            w-full h-full bg-primary
+            [clip-path:polygon(0_24%,100%_0,100%_76%,0_100%)]
+          "
         />
       </div>
 
-      {/* Contenedor centrado vertical y horizontalmente */}
-      <div className="flex flex-col justify-center items-center h-full text-center space-y-6 relative z-10 pb-28 md:p-0">
-        <div className="absolute bottom-[140px] md:-bottom-[320px] left-0 h-[600px] md:h-[920px] border-surface border"></div>
-        <div className="absolute top-[50px] md:-top-[300px] right-0 h-[600px] md:h-[920px] border-surface border"></div>
-
-        <div className="">
+      {/* CONTENIDO CENTRADO */}
+      <div className="h-full w-full flex flex-col items-center justify-center text-center gap-4 md:gap-6 border-l border-r">
+        <div>
           <h2 className="text-3xl md:text-4xl font-bold">{t("title")}</h2>
-          <p className="text-white/90 text-base md:text-lg">{t("description")}</p>
+          <p className="text-text-secondary text-base md:text-lg px-20">{t("description")}</p>
         </div>
 
         <div className="flex justify-center">
           <iframe
-            className="w-[400px] h-[300px] md:w-[720px] md:h-[400px] rounded-xl shadow-lg"
+            className="w-[360px] h-[220px] sm:w-[420px] sm:h-[260px] md:w-[720px] md:h-[405px] rounded-xl shadow-lg"
             src={t("src")}
             title="Petrobuild 360 IKM"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
-          ></iframe>
+          />
         </div>
       </div>
     </section>

@@ -10,15 +10,16 @@ import { Footer } from "@/components/shared/footer";
 
 export function HomePage() {
   return (
-    <section className="overflow-x-hidden">
+    <section className="overflow-x-hidden select-none">
       <HeroSection />
-      <div className="px-6 md:px-36 2xl:px-96 ">
+
+      <div className="px-6 md:px-36 2xl:px-96">
         <AboutSection />
         <UseCasesSection />
+        <DiscoverSection />
         <ConsultingSection />
+        <ClientsSection />
       </div>
-      {/* <DiscoverSection /> */}
-      <ClientsSection />
       
       <Footer />
     </section>

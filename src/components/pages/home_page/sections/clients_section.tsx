@@ -25,7 +25,7 @@ export function ClientsSection() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [containerWidth, setContainerWidth] = useState(0);
   const [cardWidth, setCardWidth] = useState(0);
-  const [visibleCount, setVisibleCount] = useState(1); // 1 en mobile, 2 en md+
+  const [visibleCount, setVisibleCount] = useState(1);
   const [maxScroll, setMaxScroll] = useState(0);
 
   // Debe coincidir con tailwind gap-5 (20px)
@@ -114,7 +114,7 @@ export function ClientsSection() {
   return (
     <section
       id="clients"
-      className="w-full h-screen py-16 md:py-24 px-6 md:px-36 2xl:px-96 space-y-10"
+      className="w-full h-screen py-16 md:py-24  space-y-10"
     >
       <div className="space-y-4">
         <div className="space-y-1 md:space-y-2">
@@ -130,7 +130,7 @@ export function ClientsSection() {
           </div>
         </div>
 
-        <p className="text-text-tertiary text-base md:text-lg font-light">
+        <p className="text-text-tertiary text-justify text-base md:text-lg font-light">
           {t("description")}
         </p>
       </div>
