@@ -1,6 +1,17 @@
-// header
+// Header
 export type HeaderLinks = { href: string; text: string };
-export type HeaderContact = { icon: "email" | "phone" | "location"; title: string, text: string };
+export type HeaderContact = {
+  icon: "email" | "phone" | "location";
+  title: string;
+  text: string;
+};
 
-export type Titles = { text1: string; text2: string }
-export type Aria = { prev: string; next: string }
+// Client section
+export type Review = {
+  text: string;
+  author: string;
+  location: string;
+  stars: number;
+};
+export type Titles = { text1: string; text2: string };
+export type Aria = { prev: string; next: string };

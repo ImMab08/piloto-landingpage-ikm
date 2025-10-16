@@ -40,7 +40,7 @@ export function ConsultingSection() {
   };
 
   return (
-    <section className="relative w-full flex items-center justify-center h-screen py-16 md:py-24">
+    <section className="relative w-full flex items-center justify-center h-screen py-16 md:pt-24">
       <div className="absolute inset-0 flex justify-end pointer-events-none select-none -z-10">
         <div className="relative top-[-18%] right-[-10%] md:top-[-35%] md:right-[-20%] rotate-[3deg] opacity-60 w-[110%] max-w-[900px]">
           <Image

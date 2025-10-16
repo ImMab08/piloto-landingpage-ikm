@@ -44,7 +44,7 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <body
-        className={`${oswald.variable} ${lato.variable} ${poppins.variable}`}
+        className={`${oswald.variable} ${lato.variable} ${poppins.variable} overflow-x-hidden`}
       >
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
       </body>

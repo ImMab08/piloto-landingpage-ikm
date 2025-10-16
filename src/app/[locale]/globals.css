@@ -87,3 +87,4 @@
   0%   { transform: translateX(0); }
   100% { transform: translateX(-50%); } /* avanza el ancho de un set */
 }
+

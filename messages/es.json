@@ -159,11 +159,11 @@
       "src": "https://www.youtube-nocookie.com/embed/L6alEXPfqYI"
     },
     "clients": {
-      "eyebrow": "Confianza, innovación y resultados que marcan la diferencia.",
+      "text": "Confianza, innovación y resultados que marcan la diferencia.",
       "title1": "Lo que nuestros clientes",
       "title2": "dicen de nosotros",
-      "subtitle": "Nuestras soluciones no solo optimizan procesos, también generan valor real para las organizaciones que confían en nosotros. Estas son algunas de las voces que reflejan cómo nuestras innovaciones fortalecen operaciones críticas en diferentes industrias y países.",
-      "prev": "Anterior", 
+      "description": "Nuestras soluciones no solo optimizan procesos, también generan valor real para las organizaciones que confían en nosotros. Estas son algunas de las voces que reflejan cómo nuestras innovaciones fortalecen operaciones críticas en diferentes industrias y países.",
+      "prev": "Anterior",
       "next": "Siguiente",
       "reviews": [
         {
@@ -171,6 +171,24 @@
           "author": "División de Operaciones",
           "location": "Frontera - Perú",
           "stars": 4
+        },
+        {
+          "text": "Su servicio nos da la confianza de encontrar documentos importantes y enviarlos oportunamente, con procesos claros y soporte excelente.",
+          "author": "Gerencia de TI",
+          "location": "Bogotá - Colombia",
+          "stars": 5
+        },
+        {
+          "text": "Su servicio nos da la confianza de encontrar documentos importantes y enviarlos oportunamente, con procesos claros y soporte excelente.",
+          "author": "Gerencia de TI",
+          "location": "Bogotá - Colombia",
+          "stars": 5
+        },
+        {
+          "text": "Su servicio nos da la confianza de encontrar documentos importantes y enviarlos oportunamente, con procesos claros y soporte excelente.",
+          "author": "Gerencia de TI",
+          "location": "Bogotá - Colombia",
+          "stars": 5
         },
         {
           "text": "Su servicio nos da la confianza de encontrar documentos importantes y enviarlos oportunamente, con procesos claros y soporte excelente.",

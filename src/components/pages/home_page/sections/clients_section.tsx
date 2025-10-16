@@ -1,104 +1,173 @@
-"use client";
+"use client"
 
-import { useRef } from "react";
-import { useTranslations } from "next-intl";
+import type React from "react"
 
-type Review = {
-  text: string;
-  author: string;
-  location: string;
-  stars: number;
-};
+import { useTranslations } from "next-intl"
+import { useState, useRef, useEffect } from "react"
+import { IconArrowLeftAlt, IconArrowRightAlt, IconNetworkIntelNode } from "@/components/icons"
+import type { Review } from "@/types/types"
 
 export function ClientsSection() {
-  const t = useTranslations("homePage.clients");
-  const reviews = t.raw("reviews") as Review[];
+  const t = useTranslations("homePage.clients")
+  const reviews = t.raw("reviews") as Review[]
+  const [translateX, setTranslateX] = useState(0)
+  const [isDragging, setIsDragging] = useState(false)
+  const [startX, setStartX] = useState(0)
+  const [scrollStart, setScrollStart] = useState(0)
+  const containerRef = useRef<HTMLDivElement>(null)
+  const [cardWidth, setCardWidth] = useState(450)
 
-  const scrollerRef = useRef<HTMLDivElement>(null);
-  const scrollByCards = (dir: "prev" | "next") => {
-    const node = scrollerRef.current;
-    if (!node) return;
-    const card = node.querySelector<HTMLElement>("[data-card]");
-    const delta = card ? card.offsetWidth + 24 : node.clientWidth * 0.8;
-    node.scrollBy({ left: dir === "next" ? delta : -delta, behavior: "smooth" });
-  };
+  useEffect(() => {
+    const updateCardWidth = () => {
+      if (window.innerWidth >= 768) {
+        setCardWidth(540) // Desktop: 540px card + 20px gap = 560px
+      } else {
+        setCardWidth(450) // Mobile: 450px card + 20px gap = 470px
+      }
+    }
+
+    updateCardWidth()
+    window.addEventListener("resize", updateCardWidth)
+    return () => window.removeEventListener("resize", updateCardWidth)
+  }, [])
+
+  const scrollLeft = () => {
+    const scrollAmount = cardWidth + 20 // card width + gap
+    setTranslateX((prev) => Math.min(prev + scrollAmount, 0))
+  }
+
+  const scrollRight = () => {
+    const scrollAmount = cardWidth + 20 // card width + gap
+    const maxScroll = -(reviews.length - 1) * scrollAmount
+    setTranslateX((prev) => Math.max(prev - scrollAmount, maxScroll))
+  }
+
+  const handleMouseDown = (e: React.MouseEvent) => {
+    setIsDragging(true)
+    setStartX(e.pageX)
+    setScrollStart(translateX)
+  }
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!isDragging) return
+    e.preventDefault()
+    const x = e.pageX
+    const walk = (x - startX) * 1.5 // Multiply by 1.5 for smoother drag
+    setTranslateX(scrollStart + walk)
+  }
+
+  const handleMouseUp = () => {
+    if (!isDragging) return
+    setIsDragging(false)
+    snapToNearestCard()
+  }
+
+  const handleMouseLeave = () => {
+    if (isDragging) {
+      setIsDragging(false)
+      snapToNearestCard()
+    }
+  }
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setIsDragging(true)
+    setStartX(e.touches[0].pageX)
+    setScrollStart(translateX)
+  }
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (!isDragging) return
+    const x = e.touches[0].pageX
+    const walk = (x - startX) * 1.5
+    setTranslateX(scrollStart + walk)
+  }
+
+  const handleTouchEnd = () => {
+    setIsDragging(false)
+    snapToNearestCard()
+  }
+
+  const snapToNearestCard = () => {
+    const scrollAmount = cardWidth + 20
+    const maxScroll = -(reviews.length - 1) * scrollAmount
+    const nearestCard = Math.round(translateX / scrollAmount) * scrollAmount
+    const clampedPosition = Math.max(Math.min(nearestCard, 0), maxScroll)
+    setTranslateX(clampedPosition)
+  }
 
   return (
-    <section id="clients" className="w-full py-16 md:py-24">
-      <div className="px-6 md:px-36 2xl:px-96">
-        <div className="relative">
-          <div className="mb-2 flex items-center gap-2 text-primary/90">
-            <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M11 2h2v20h-2zM2 11h20v2H2zM4.9 4.9l1.4-1.4L20.5 17.7l-1.4 1.4zM3.5 17.7 17.7 3.5l1.4 1.4L4.9 19.1z"/>
-            </svg>
-            <span className="text-sm font-semibold tracking-wide">{t("eyebrow")}</span>
+    <section id="clients" className="w-full h-screen py-16 md:py-24 px-6 md:px-36 2xl:px-96 space-y-10">
+      <div className="space-y-4">
+        <div className="space-y-1 md:space-y-2">
+          <div className="flex items-center text-accent space-x-1 md:space-x-2">
+            <IconNetworkIntelNode width={26} height={26} />
+            <p className="font-oswald font-medium text-sm md:text-lg">{t("text")}</p>
           </div>
-
-          <h2 className="text-3xl md:text-5xl font-extrabold text-secondary leading-tight">
-            {t("title1")}<br className="hidden md:block" />
-            {t("title2")}
-          </h2>
-
-          <p className="mt-3 max-w-3xl text-muted-foreground">{t("subtitle")}</p>
-
-          <div className="absolute right-0 top-0 mt-10 md:mt-12 flex items-center gap-2">
-            <button
-              onClick={() => scrollByCards("prev")}
-              className="size-9 rounded-full bg-white shadow-md ring-1 ring-black/5 hover:bg-slate-50 transition"
-              aria-label={t("prev")}
-            >
-              <span className="sr-only">{t("prev")}</span>
-              <svg viewBox="0 0 24 24" className="mx-auto h-5 w-5" fill="currentColor"><path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
-            </button>
-            <button
-              onClick={() => scrollByCards("next")}
-              className="size-9 rounded-full bg-white shadow-md ring-1 ring-black/5 hover:bg-slate-50 transition"
-              aria-label={t("next")}
-            >
-              <span className="sr-only">{t("next")}</span>
-              <svg viewBox="0 0 24 24" className="mx-auto h-5 w-5" fill="currentColor"><path d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
-            </button>
+          <div className="font-oswald font-medium text-3xl md:text-5xl text-primary">
+            <h3>{t("title1")}</h3>
+            <h3>{t("title2")}</h3>
           </div>
         </div>
 
-        <div className="-mx-6 md:-mx-0 mt-8 md:mt-10">
-          <div
-            ref={scrollerRef}
-            className="flex gap-6 overflow-x-auto px-6 md:px-0 snap-x snap-mandatory scroll-smooth [scrollbar-width:none] [-ms-overflow-style:none]"
-          >
-            <style jsx>{`div::-webkit-scrollbar{display:none}`}</style>
+        <p className="text-text-tertiary text-base md:text-lg font-light">{t("description")}</p>
+      </div>
 
-            {reviews.map((rv, i) => (
-              <article
-                key={i}
-                data-card
-                className="snap-start min-w-[280px] sm:min-w-[360px] md:min-w-[420px] lg:min-w-[460px]
-                           rounded-xl bg-white shadow-md ring-1 ring-black/5 transition hover:shadow-lg"
-              >
-                <div className="h-3 rounded-t-xl bg-primary" />
-                <div className="p-5 md:p-6">
-                  <p className="text-muted-foreground leading-relaxed">“{rv.text}”</p>
-                  <div className="mt-5">
-                    <p className="font-extrabold text-secondary leading-tight">{rv.author}</p>
-                    <p className="text-primary/80 text-sm">{rv.location}</p>
-                    <div className="mt-2 flex items-center gap-1 text-yellow-400">
-                      {Array.from({ length: 5 }).map((_, k) => (
-                        <svg
-                          key={k}
-                          viewBox="0 0 20 20"
-                          className={`h-4 w-4 ${k < rv.stars ? "fill-current" : "fill-none stroke-current"}`}
-                        >
-                          <path d="M10 1.5 12.8 7l6 .9-4.4 4.2 1 5.9L10 15.8 4.6 18l1-5.9L1.2 7.9l6-.9L10 1.5z" strokeWidth="1.2"/>
-                        </svg>
-                      ))}
-                    </div>
+      <div className="relative flex flex-col w-full h-full">
+        <div className="relative flex justify-end text-primary space-x-3 md:space-x-4 z-10">
+          <button
+            onClick={scrollLeft}
+            className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-accent/30 flex items-center justify-center cursor-pointer hover:bg-accent/50 transition-colors"
+            aria-label="Scroll left"
+          >
+            <IconArrowLeftAlt className="size-5 md:size-6" />
+          </button>
+          <button
+            onClick={scrollRight}
+            className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-accent/30 flex items-center justify-center cursor-pointer hover:bg-accent/50 transition-colors"
+            aria-label="Scroll right"
+          >
+            <IconArrowRightAlt className="size-5 md:size-6" />
+          </button>
+        </div>
+
+        <div
+          ref={containerRef}
+          onMouseDown={handleMouseDown}
+          onMouseMove={handleMouseMove}
+          onMouseUp={handleMouseUp}
+          onMouseLeave={handleMouseLeave}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+          className={`absolute left-0 right-0 flex gap-5 mt-12 md:mt-16 z-10 ${
+            isDragging ? "select-none" : ""
+          }`}
+          style={{
+            transform: `translateX(${translateX}px)`,
+            transition: isDragging ? "none" : "transform 500ms ease-out",
+          }}
+        >
+          {reviews.map((review, id) => (
+            <div
+              key={id}
+              className="w-[450px] md:w-[540px] h-[390px] md:h-[430px] rounded-lg shadow overflow-hidden flex flex-col flex-shrink-0 duration-300 hover:scale-[1.01] md:hover:scale-[1.03] hover:shadow-2xl"
+            >
+              <div className="w-full h-3 bg-primary"></div>
+              <div className="flex-1 flex flex-col justify-between py-10 md:py-20 px-6 md:px-10">
+                <div className="h-full flex flex-col space-y-5">
+                  <div className="font-oswald">
+                    <p className="font-medium text-2xl text-primary leading-6">{review.author}</p>
+                    <p className="text-lg text-accent">{review.location}</p>
                   </div>
+                  <p className="text-justify text-base text-text-tertiary leading-6">{review.text}</p>
                 </div>
-              </article>
-            ))}
-          </div>
+
+                <div className="border-border border-t"></div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
-  );
+  )
 }
