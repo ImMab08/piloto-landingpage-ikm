@@ -6,6 +6,7 @@ export * from './icon_arrow_left_alt'
 export * from './icon_arrow_right_alt'
 
 export * from './icon_oil'
+export * from './icon_star'
 export * from './icon_flow'
 export * from './icon_team'
 export * from './icon_phone'

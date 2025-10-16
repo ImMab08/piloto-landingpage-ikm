@@ -159,24 +159,28 @@
       "src": "https://www.youtube-nocookie.com/embed/L6alEXPfqYI"
     },
     "clients": {
-      "eyebrow": "Confianza, innovación y resultados que marcan la diferencia.",
-      "title": {
-        "line1": "Lo que nuestros clientes",
-        "line2": "dicen de nosotros"
-      },
-      "subtitle": "Nuestras soluciones no solo optimizan procesos, también generan valor real para las organizaciones que confían en nosotros. Estas son algunas de las voces que reflejan cómo nuestras innovaciones fortalecen operaciones críticas en diferentes industrias y países.",
-      "aria": { "prev": "Anterior", "next": "Siguiente" },
+      "text": "Trust, innovation, and results that make a difference.",
+      "title1": "What our clients",
+      "title2": "say about us",
+      "description": "Our solutions not only optimize processes, but also generate real value for organizations that trust us. These are some of the voices that reflect how our innovations strengthen critical operations across different industries and countries.",
+      "prev": "Previous",
       "reviews": [
         {
-          "text": "El 2020 fue un año difícil. Después de casi 3 años de trabajo híbrido entre casa y oficina, contar con acceso, precisión y control sobre nuestra propia información ha sido clave. Su servicio nos da la confianza de saber que podemos encontrar documentos importantes y enviarlos a las entidades regulatorias de manera oportuna, sin el riesgo de interrumpir nuestra operación.",
-          "author": "División de Operaciones",
-          "location": "Frontera - Perú",
-          "stars": 4
+          "text": "2020 was a difficult year. After almost 3 years of hybrid work between home and office, having access, precision, and control over our own information has been key. Their service gives us the confidence to know that we can find important documents and send them to regulatory agencies on time without risking interruption to our operation.",
+          "author": "Operations Division",
+          "location": "Frontera - Peru",
+          "stars": 5
         },
         {
-          "text": "Su servicio nos da la confianza de encontrar documentos importantes y enviarlos oportunamente, con procesos claros y soporte excelente.",
-          "author": "Gerencia de TI",
-          "location": "Bogotá - Colombia",
+          "text": "Since the pandemic, their service has become a critical part of our company’s mission, as well as of the broader mission specific to our operational division.",
+          "author": "Frontera Canada EPIS TEAM",
+          "location": "Colombia",
+          "stars": 5
+        },
+        {
+          "text": "Thank you for a reliable corporate strategy and consistent, high-quality service.",
+          "author": "Confidential Government Regulatory Agency",
+          "location": "Colombia",
           "stars": 5
         }
       ]

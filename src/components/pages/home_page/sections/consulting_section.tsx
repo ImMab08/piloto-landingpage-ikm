@@ -12,17 +12,11 @@ import {
   IconEngineering,
   IconWorkspacePremium,
 } from "@/components/icons";
-
-type StatRaw = {
-  icon: "exp" | "money" | "engineers" | "exp2";
-  value: string;
-  label: string;
-};
+import { StatRaw } from "@/types/types";
 
 export function ConsultingSection() {
   const t = useTranslations("homePage.stats");
 
-  // Data desde i18n (simple y directo)
   const stats = t.raw("items") as StatRaw[];
   const advisory = {
     title: t("advisory.title"),
@@ -31,7 +25,6 @@ export function ConsultingSection() {
     ctaHref: t("advisory.ctaHref"),
   };
 
-  // Mapa de íconos (evita JSX en JSON)
   const ICONS: Record<StatRaw["icon"], JSX.Element> = {
     exp: <IconOil className="w-6 md:w-8 h-6 md:h-8" />,
     money: <IconPayments className="w-6 md:w-8 h-6 md:h-8" />,
@@ -41,15 +34,15 @@ export function ConsultingSection() {
 
   return (
     <section className="relative w-full flex items-center justify-center h-screen py-16 md:pt-24">
-      <div className="absolute inset-0 flex justify-end pointer-events-none select-none -z-10">
-        <div className="relative top-[-18%] right-[-10%] md:top-[-35%] md:right-[-20%] rotate-[3deg] opacity-60 w-[110%] max-w-[900px]">
+      <div className="absolute inset-0 pointer-events-none select-none -z-10 ">
+        <div className="absolute top-[-18%] md:top-[-28%] right-0 md:rotate-[6deg] opacity-60 w-full max-w-[900px]">
           <Image
             alt=""
             src="/images/svg/mundo-bg.svg"
             width={900}
             height={600}
             priority
-            className="object-contain w-full h-auto"
+            className="w-full h-auto object-contain"
           />
         </div>
       </div>
@@ -66,7 +59,7 @@ export function ConsultingSection() {
                 <div className="flex flex-col items-start gap-3 text-purple">
                   <div className="flex items-center space-x-2">
                     <div className="w-10 h-10 md:w-14 md:h-14 flex items-center justify-center p-2 rounded-full bg-purple/20">
-                      <div className="">{ICONS[s.icon]}</div>
+                      <div>{ICONS[s.icon]}</div>
                     </div>
                     <p className="font-oswald font-medium text-xl md:text-3xl text-purple">
                       {s.value}

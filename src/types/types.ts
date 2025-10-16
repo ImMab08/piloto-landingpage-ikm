@@ -6,6 +6,13 @@ export type HeaderContact = {
   text: string;
 };
 
+// Consulting section
+export type StatRaw = {
+  icon: "exp" | "money" | "engineers" | "exp2";
+  value: string;
+  label: string;
+};
+
 // Client section
 export type Review = {
   text: string;
