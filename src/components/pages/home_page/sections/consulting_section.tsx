@@ -1,6 +1,8 @@
 "use client";
 
+import { JSX } from "react";
 import Image from "next/image";
+
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import {
@@ -10,7 +12,6 @@ import {
   IconEngineering,
   IconWorkspacePremium,
 } from "@/components/icons";
-import { JSX } from "react";
 
 type StatRaw = {
   icon: "exp" | "money" | "engineers" | "exp2";

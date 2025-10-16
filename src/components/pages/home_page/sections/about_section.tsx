@@ -78,7 +78,7 @@ export function AboutSection() {
                   {cards("card2.description")}
                 </p>
               </div>
-              <Link href="" className="group font-oswald ml-auto md:mr-auto inline-flex items-center text-purple font-semibold">
+              <Link href="" className="group font-oswald mr-auto md:mr-0 md:ml-auto inline-flex items-center text-purple font-semibold">
                 {cards("card2.more")}
                 <IconArrowRight className="size-8 pt-1 transition-transform group-hover:translate-x-1" />
               </Link>

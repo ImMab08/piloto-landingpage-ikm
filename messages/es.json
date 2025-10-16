@@ -157,6 +157,28 @@
       "title": "Conoce también",
       "description": "Deja que tu información impulse su estrategia corporativa.",
       "src": "https://www.youtube-nocookie.com/embed/L6alEXPfqYI"
+    },
+    "clients": {
+      "eyebrow": "Confianza, innovación y resultados que marcan la diferencia.",
+      "title1": "Lo que nuestros clientes",
+      "title2": "dicen de nosotros",
+      "subtitle": "Nuestras soluciones no solo optimizan procesos, también generan valor real para las organizaciones que confían en nosotros. Estas son algunas de las voces que reflejan cómo nuestras innovaciones fortalecen operaciones críticas en diferentes industrias y países.",
+      "prev": "Anterior", 
+      "next": "Siguiente",
+      "reviews": [
+        {
+          "text": "El 2020 fue un año difícil. Después de casi 3 años de trabajo híbrido entre casa y oficina, contar con acceso, precisión y control sobre nuestra propia información ha sido clave. Su servicio nos da la confianza de saber que podemos encontrar documentos importantes y enviarlos a las entidades regulatorias de manera oportuna, sin el riesgo de interrumpir nuestra operación.",
+          "author": "División de Operaciones",
+          "location": "Frontera - Perú",
+          "stars": 4
+        },
+        {
+          "text": "Su servicio nos da la confianza de encontrar documentos importantes y enviarlos oportunamente, con procesos claros y soporte excelente.",
+          "author": "Gerencia de TI",
+          "location": "Bogotá - Colombia",
+          "stars": 5
+        }
+      ]
     }
   },
   "footer": {

@@ -4,7 +4,7 @@ import { AboutSection } from "./sections/about_section";
 import { UseCasesSection } from "./sections/use_cases_section";
 import { ConsultingSection } from "./sections/consulting_section";
 import { DiscoverSection } from "./sections/discover_section";
-import { ClientsSection } from "./sections/clients_section";
+// import { ClientsSection } from "./sections/clients_section";
 
 import { Footer } from "@/components/shared/footer";
 
@@ -18,7 +18,7 @@ export function HomePage() {
         <ConsultingSection />
       </div>
       <DiscoverSection />
-      <ClientsSection />
+      {/* <ClientsSection /> */}
       
       <Footer />
     </section>

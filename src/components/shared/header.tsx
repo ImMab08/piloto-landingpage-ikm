@@ -65,9 +65,9 @@ export function Header() {
     return () => io.disconnect();
   }, []);
 
-  // 👇 Clase dinámica del contenedor del header
+  // Clase dinámica del contenedor del header
   const headerWrapperClass = [
-    "w-full p-4 lg:py-4 md:px-32 right-0 z-40 transition-all duration-300",
+    "w-full p-6 lg:py-4 md:px-36 right-0 z-40 transition-all duration-300",
     pastHero
       ? "fixed top-0 bg-accent-foreground/80 shadow-md backdrop-blur-sm"
       : scrolled
@@ -133,8 +133,8 @@ export function Header() {
 
       {/* Header */}
       <div className={headerWrapperClass}>
-        <div className="flex w-full lg:flex-col lg:gap-0 space-y-3 lg:space-y-4 transition-colors duration-300">
-          <div className={`transition-all duration-300 ${pastHero ? "md:hidden" : "flex justify-between"}`}>
+        <div className={`${pastHero ? "flex md:gap-10 duration-400" : "flex w-full lg:flex-col lg:gap-0 space-y-3 lg:space-y-4 transition-all duration-300" }`}>
+          <div className="flex justify-between">
             <div>
               <Image
                 width={256}
@@ -144,9 +144,9 @@ export function Header() {
                 src="/images/logo_ikm_transparente.png"
               />
             </div>
-            <div className="hidden lg:flex space-x-12 text-text-secondary">
+            <div className={` ${pastHero ? "md:hidden transition-all duration-400" : "hidden md:flex justify-between space-x-12 text-text-secondary transition-all duration-300"}`}>
               {headerContact.map((item) => (
-                <div key={item.title} className="flex items-center space-x-2">
+                <div key={item.title} className="hidden md:flex items-center space-x-2">
                   <div className="border border-surface rounded-xl p-2">
                     {iconsMap[item.icon]}
                   </div>
