@@ -173,7 +173,7 @@ export function ClientsSection() {
           {reviews.map((review, id) => (
             <div
               key={id}
-              className="h-[390px] md:h-[430px] rounded-lg shadow overflow-hidden flex flex-col flex-shrink-0 duration-300 hover:scale-[1.01] md:hover:scale-[1.03] hover:shadow-2xl"
+              className="h-[380px] md:h-[430px] rounded-lg shadow overflow-hidden flex flex-col flex-shrink-0 duration-300 hover:scale-[1.01] md:hover:scale-[1.03] hover:shadow-2xl"
               style={{ width: cardWidth || undefined }}
             >
               <div className="w-full h-3 bg-primary"></div>
@@ -185,7 +185,7 @@ export function ClientsSection() {
                     </p>
                     <p className="text-lg text-accent">{review.location}</p>
                   </div>
-                  <p className="text-justify text-base text-text-tertiary leading-6">
+                  <p className="text-justify text-sm md:text-base text-text-tertiary leading-6">
                     {review.text}
                   </p>
                 </div>

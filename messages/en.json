@@ -5,9 +5,9 @@
   },
   "header": {
     "links": [
-      { "href": "/", "text": "Inicio" },
-      { "href": "/servicios", "text": "Servicios" },
-      { "href": "/equipo", "text": "Equipo" }
+      { "href": "/", "text": "Home" },
+      { "href": "/servicios", "text": "Services" },
+      { "href": "/equipo", "text": "Team" }
     ],
     "contact": [
       {
