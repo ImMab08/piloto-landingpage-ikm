@@ -4,8 +4,10 @@ import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 
-import "./globals.css";
+import { Footer } from "@/components/shared/footer";
+import { Header } from "@/components/shared/header";
 
+import "./globals.css";
 import { Oswald, Lato, Poppins } from "next/font/google";
 
 const oswald = Oswald({ 
@@ -46,7 +48,11 @@ export default async function RootLayout({
       <body
         className={`${oswald.variable} ${lato.variable} ${poppins.variable} `}
       >
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider>
+          <Header />
+          {children}
+          <Footer />
+        </NextIntlClientProvider>
       </body>
     </html>
   );

@@ -1,4 +1,5 @@
-// Header.tsx
+'use client'
+
 import { JSX, useEffect, useState } from "react";
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";

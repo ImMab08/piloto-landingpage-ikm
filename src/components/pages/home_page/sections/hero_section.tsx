@@ -6,7 +6,6 @@ import { useTranslations } from "next-intl";
 import { LogosCarousel } from "@/components/ui/logos_carrousel";
 
 import { IconArrowDown } from "@/components/icons";
-import { Header } from "@/components/shared/header";
 
 export function HeroSection() {
   const t = useTranslations("homePage.hero");
@@ -25,7 +24,7 @@ export function HeroSection() {
       <div className="absolute inset-0 bg-accent-foreground/80" />
 
       <div className="relative w-full h-full flex items-center justify-centers p-4 lg:py-4 lg:px-14">
-        <Header />
+
 
         {/* Contenido principal */}
         <div className="flex-1 flex flex-col items-center justify-center px-6  gap-5">

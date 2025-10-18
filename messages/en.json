@@ -6,8 +6,8 @@
   "header": {
     "links": [
       { "href": "/", "text": "Home" },
-      { "href": "/servicios", "text": "Services" },
-      { "href": "/equipo", "text": "Team" }
+      { "href": "/services", "text": "Services" },
+      { "href": "/team", "text": "Team" }
     ],
     "contact": [
       {

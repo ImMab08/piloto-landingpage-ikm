@@ -8,7 +8,6 @@ export function DiscoverSection() {
   return (
     <section className="relative w-full h-screen overflow-visible text-white">
       <div className="absolute -inset-x-[100%] -inset-y-[10%] -z-10 pointer-events-none select-none">
-        {/* Parche azul recortado con clip-path para formar el “triángulo invertido” */}
         <div
           className="
             w-full h-full bg-primary

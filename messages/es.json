@@ -6,8 +6,8 @@
   "header": {
     "links": [
       { "href": "/", "text": "Inicio" },
-      { "href": "/servicios", "text": "Servicios" },
-      { "href": "/equipo", "text": "Equipo" }
+      { "href": "/services", "text": "Servicios" },
+      { "href": "/team", "text": "Equipo" }
     ],
     "contact": [
       {
@@ -183,6 +183,20 @@
           "location": "Colombia",
           "stars": 5
         }
+      ]
+    }
+  },
+  "servicePage" : {
+    "herramientas": {
+      "text": "Creando para el crecimiento",
+      "title1": "Impulsa tu procesos con",
+      "title2": "Microsoft 365 y Azure",
+      "description": "Innovamos con el ecosistema Microsoft 365 y tecnologías a la vanguardia para construir procesos más ágiles, inteligentes y escalables.",
+      "cards": [
+        {"text": "Automatizaciones", "title": "Aplicaciones que hacen la diferencia", "description": "Diseñamos y optimizamos automatizaciones que liberan a tu equipo de tareas repetitivas, generando eficiencia real.", "image": ""},
+        {"text": "Power Apps", "title": "Flujos que impulsan resultados", "description": "Construimos apps a la medida, simples y potentes, que resuelven necesidades críticas de tu organización.", "image": ""},
+        {"text": "Azure", "title": "Escalamos tus ideas en la nube", "description": "Innovamos sobre Azure para crear soluciones seguras, flexibles y listas para crecer contigo.", "image": ""},
+        {"text": "ProCode (Desarrollo avanzado)", "title": "Construcción sin límites", "description": "Creamos desarrollos avanzados que integran lo mejor del ecosistema Microsoft con soluciones propias de alto impacto.s", "image": ""}
       ]
     }
   },
