@@ -22,3 +22,14 @@ export type Review = {
 };
 export type Titles = { text1: string; text2: string };
 export type Aria = { prev: string; next: string };
+
+
+// Page Services
+// Skills section
+export type Card = {
+  text: string;
+  title: string;
+  description: string;
+  image?: string;
+  gradient?: string;
+};

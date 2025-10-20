@@ -1,12 +1,18 @@
 'use client'
 
 import { JSX, useEffect, useState } from "react";
+
 import Image from "next/image";
+import { usePathname } from "next/navigation";
+
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
+
 import { Button } from "../ui/buttons/button";
 import { ButtonLanguage } from "../ui/buttons/button_language";
+
 import { HeaderLinks, HeaderContact } from "@/types/types";
+
 import {
   IconCloseMenu,
   IconLocate,
@@ -16,27 +22,34 @@ import {
 } from "@/components/icons";
 
 export function Header() {
+  // Enrutador.
+  const pathname = usePathname();
+
+  // Comportamientos del menú.
   const [openMenu, setOpenMenu] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [pastHero, setPastHero] = useState(false); // 👈 NEW
+  const [pastHero, setPastHero] = useState(false);
 
+  // Traducciones.
   const header = useTranslations("header");
   const headerLinks = header.raw("links") as HeaderLinks[];
   const headerContact = header.raw("contact") as HeaderContact[];
   const headerBtnContact = header.raw("btnContac") as HeaderLinks;
 
+  // Mapeo de iconos.
   const iconsMap: Record<HeaderContact["icon"], JSX.Element> = {
     email: <IconSendEmail className="w-5 h-5" />,
     phone: <IconPhone className="w-5 h-5" />,
     location: <IconLocate className="w-5 h-5" />,
   };
 
-  // Desactivar scroll del body cuando el menú está abierto (Vista mobile).
+  // Bloquear scroll cuando el menú móvil está abierto.
   useEffect(() => {
     document.body.style.overflow = openMenu ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
   }, [openMenu]);
 
-  // Activar scroll header
+  // Estado "scrolled" para blur/sombra
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 0);
     onScroll();
@@ -44,29 +57,36 @@ export function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Detectar cuando sales del Hero
+  // IntersectionObserver cuando cambia la ruta.
   useEffect(() => {
     const hero = document.getElementById("hero");
-    if (!hero) return;
+
+    // Si esta página NO tiene #hero, tratamos el header como "despues del hero".
+    if (!hero) {
+      setPastHero(true);
+      return; // no montamos observer.
+    }
+
+    // Estado inicial por si ya hay un scroll y se cambia de pantalla.
+    const rect = hero.getBoundingClientRect();
+    const headerOffset = 64; // ajusta a la altura real del header
+    setPastHero(rect.top <= -headerOffset || rect.bottom <= headerOffset);
 
     const io = new IntersectionObserver(
       ([entry]) => {
-        // Si el hero NO está intersectando, ya pasaste a la siguiente sección
+        // cuando se deja de intersectar (debajo del header), estás pasado del hero
         setPastHero(!entry.isIntersecting);
       },
       {
-        // Ajusta margen si se requiere que cambie antes/después
-        // Por ejemplo, si el header mide 64px:
-        rootMargin: "-64px 0px 0px 0px",
+        rootMargin: "-64px 0px 0px 0px", // ajusta a la altura de tu header
         threshold: 0,
       }
     );
 
     io.observe(hero);
     return () => io.disconnect();
-  }, []);
+  }, [pathname]);
 
-  // Clase dinámica del contenedor del header
   const headerWrapperClass = [
     "w-full p-6 lg:py-4 md:px-36 right-0 z-40 transition-all duration-300",
     pastHero
@@ -132,7 +152,7 @@ export function Header() {
         </div>
       </div>
 
-      {/* Header */}
+      {/* Panel desktop */}
       <div className={headerWrapperClass}>
         <div className={`${pastHero ? "flex md:gap-10 duration-400" : "flex w-full lg:flex-col lg:gap-0 space-y-3 lg:space-y-4 transition-all duration-300" }`}>
           <div className="flex justify-between">
