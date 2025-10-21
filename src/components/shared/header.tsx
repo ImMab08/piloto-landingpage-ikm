@@ -163,6 +163,7 @@ export function Header() {
                 alt="Logo IKM"
                 className="h-12 w-auto md:h-16 mr-20 lg:mr-0"
                 src="/images/logo_ikm_transparente.png"
+                priority
               />
             </div>
             <div className={` ${pastHero ? "md:hidden transition-all duration-400" : "hidden md:flex justify-between space-x-12 text-text-secondary transition-all duration-300"}`}>

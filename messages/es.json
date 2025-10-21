@@ -6,8 +6,8 @@
   "header": {
     "links": [
       { "href": "/", "text": "Inicio" },
-      { "href": "/services", "text": "Servicios" },
-      { "href": "/team", "text": "Equipo" }
+      { "href": "/servicios", "text": "Servicios" },
+      { "href": "/equipo", "text": "Equipo" }
     ],
     "contact": [
       {
@@ -186,20 +186,77 @@
       ]
     }
   },
-  "servicePage" : {
+  "servicePage": {
     "herramientas": {
       "text": "Creando para el crecimiento",
       "title1": "Impulsa tu procesos con",
       "title2": "Microsoft 365 y Azure",
       "description": "Innovamos con el ecosistema Microsoft 365 y tecnologías a la vanguardia para construir procesos más ágiles, inteligentes y escalables.",
       "cards": [
-        {"text": "Automatizaciones", "title": "Aplicaciones que hacen la diferencia", "description": "Diseñamos y optimizamos automatizaciones que liberan a tu equipo de tareas repetitivas, generando eficiencia real.", "image": ""},
-        {"text": "Power Apps", "title": "Flujos que impulsan resultados", "description": "Construimos apps a la medida, simples y potentes, que resuelven necesidades críticas de tu organización.", "image": ""},
-        {"text": "Azure", "title": "Escalamos tus ideas en la nube", "description": "Innovamos sobre Azure para crear soluciones seguras, flexibles y listas para crecer contigo.", "image": ""},
-        {"text": "ProCode (Desarrollo avanzado)", "title": "Construcción sin límites", "description": "Creamos desarrollos avanzados que integran lo mejor del ecosistema Microsoft con soluciones propias de alto impacto.s", "image": ""}
+        {
+          "text": "Automatizaciones",
+          "title": "Aplicaciones que hacen la diferencia",
+          "description": "Diseñamos y optimizamos automatizaciones que liberan a tu equipo de tareas repetitivas, generando eficiencia real.",
+          "image": ""
+        },
+        {
+          "text": "Power Apps",
+          "title": "Flujos que impulsan resultados",
+          "description": "Construimos apps a la medida, simples y potentes, que resuelven necesidades críticas de tu organización.",
+          "image": ""
+        },
+        {
+          "text": "Azure",
+          "title": "Escalamos tus ideas en la nube",
+          "description": "Innovamos sobre Azure para crear soluciones seguras, flexibles y listas para crecer contigo.",
+          "image": ""
+        },
+        {
+          "text": "ProCode (Desarrollo avanzado)",
+          "title": "Construcción sin límites",
+          "description": "Creamos desarrollos avanzados que integran lo mejor del ecosistema Microsoft con soluciones propias de alto impacto.s",
+          "image": ""
+        }
       ]
     }
   },
+  "teamPage": {
+    "hero": {
+      "titles": {
+        "title1": "Nuestro equipo, el",
+        "title2": "<hl>Motor</hl> de la",
+        "title3": "Transformación."
+      },
+      "members": [
+        {
+          "name": "Hugo Higuera",
+          "role": "Fundador y Director",
+          "image": "/images/equipo/lideres/hugo_higuera.png"
+        },
+        {
+          "name": "Gustavo Espil",
+          "role": "Vicepresidente de Relaciones",
+          "image": "/images/equipo/lideres/gustavo_espil.png"
+        },
+        {
+          "name": "Christian Vargas",
+          "role": "Director de Tecnología",
+          "image": "/images/equipo/lideres/christian_vargas.png"
+        },
+        {
+          "name": "David Florez",
+          "role": "Director de Operaciones",
+          "image": "/images/equipo/lideres/david_florez.png"
+        },
+        {
+          "name": "Daniel Higuera",
+          "role": "Director de Operaciones Internacionales",
+          "image": "/images/equipo/lideres/daniel_higuera.png"
+        }
+      ]
+    }
+  },
+
   "footer": {
     "newsletter": {
       "title": "Deja tu correo y",

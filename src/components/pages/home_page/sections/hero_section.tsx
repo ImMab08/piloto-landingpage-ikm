@@ -23,7 +23,7 @@ export function HeroSection() {
       />
       <div className="absolute inset-0 bg-accent-foreground/80" />
 
-      <div className="relative w-full h-full flex items-center justify-centers p-4 lg:py-4 lg:px-14">
+      <div className="relative w-full h-full flex items-center justify-center p-4 lg:py-4 lg:px-14">
 
 
         {/* Contenido principal */}

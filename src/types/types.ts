@@ -23,8 +23,7 @@ export type Review = {
 export type Titles = { text1: string; text2: string };
 export type Aria = { prev: string; next: string };
 
-
-// Page Services
+// Página de servicios
 // Skills section
 export type Card = {
   text: string;
@@ -32,4 +31,13 @@ export type Card = {
   description: string;
   image?: string;
   gradient?: string;
+};
+
+
+// Página de equipo
+// Members
+export type Member = {
+  name: string;
+  role: string;
+  image?: string;
 };
