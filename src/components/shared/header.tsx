@@ -1,12 +1,11 @@
-'use client'
-
-import { JSX, useEffect, useState } from "react";
+"use client";
 
 import Image from "next/image";
-import { usePathname } from "next/navigation";
+import { JSX, useEffect, useState } from "react";
 
-import { Link } from "@/i18n/navigation";
+import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
 import { Button } from "../ui/buttons/button";
 import { ButtonLanguage } from "../ui/buttons/button_language";
@@ -46,7 +45,9 @@ export function Header() {
   // Bloquear scroll cuando el menú móvil está abierto.
   useEffect(() => {
     document.body.style.overflow = openMenu ? "hidden" : "";
-    return () => { document.body.style.overflow = ""; };
+    return () => {
+      document.body.style.overflow = "";
+    };
   }, [openMenu]);
 
   // Estado "scrolled" para blur/sombra
@@ -88,19 +89,19 @@ export function Header() {
   }, [pathname]);
 
   const headerWrapperClass = [
-    "w-full p-6 lg:py-4 md:px-36 right-0 z-40 transition-all duration-300",
+    "w-full p-6 sm:px-8 md:px-12 lg:px-20 xl:px-36 right-0 z-40 transition-all duration-300",
     pastHero
       ? "fixed top-0 bg-accent-foreground/80 shadow-md backdrop-blur-sm"
       : scrolled
-        ? "fixed top-0 backdrop-blur-xl"
-        : "absolute top-0 bg-transparent",
+      ? "fixed top-0 backdrop-blur-xl"
+      : "absolute top-0 bg-transparent",
   ].join(" ");
 
   return (
     <>
       {/* Panel móvil */}
       <div
-        className={`fixed inset-0 z-50 md:hidden transition-transform duration-300 ease-in-out 
+        className={`fixed inset-0 z-50 lg:hidden transition-transform duration-300 ease-in-out 
         ${openMenu ? "translate-x-0" : "translate-x-full"} overflow-hidden`}
       >
         <div
@@ -154,21 +155,34 @@ export function Header() {
 
       {/* Panel desktop */}
       <div className={headerWrapperClass}>
-        <div className={`${pastHero ? "flex md:gap-10 duration-400" : "flex w-full lg:flex-col lg:gap-0 space-y-3 lg:space-y-4 transition-all duration-300" }`}>
+        <div
+          className={`${
+            pastHero
+              ? "flex lg:gap-10 duration-400"
+              : "flex w-full md:flex-col md:space-y-4 transition-all duration-300"
+          }`}
+        >
           <div className="flex justify-between">
-            <div>
-              <Image
-                width={256}
-                height={80}
-                alt="Logo IKM"
-                className="h-12 w-auto md:h-16 mr-20 lg:mr-0"
-                src="/images/logo_ikm_transparente.png"
-                priority
-              />
-            </div>
-            <div className={` ${pastHero ? "md:hidden transition-all duration-400" : "hidden md:flex justify-between space-x-12 text-text-secondary transition-all duration-300"}`}>
+            <Image
+              priority
+              width={256}
+              height={80}
+              alt="Logo IKM"
+              src="/images/logo_ikm_transparente.png"
+              className="h-12 w-auto md:h-16 mr-20 lg:mr-0"
+            />
+            <div
+              className={` ${
+                pastHero
+                  ? "sm:hidden transition-all duration-400"
+                  : "hidden md:flex justify-between space-x-12 text-text-secondary transition-all duration-300"
+              }`}
+            >
               {headerContact.map((item) => (
-                <div key={item.title} className="hidden md:flex items-center space-x-2">
+                <div
+                  key={item.title}
+                  className="hidden sm:flex items-center space-x-2"
+                >
                   <div className="border border-surface rounded-xl p-2">
                     {iconsMap[item.icon]}
                   </div>
@@ -183,12 +197,12 @@ export function Header() {
 
           <header className="w-full h-12 md:h-16 mt-1 lg:mt-0 bg-surface/8 backdrop-blur-3xl rounded-lg px-5 transition-colors duration-300">
             <div className="flex h-full text-sm lg:text-base items-center justify-between">
-              <nav className="flex items-center gap-5 lg:gap-10">
+              <nav className="flex items-center gap-4 xs:gap-8 sm:gap-10">
                 {headerLinks.map((item) => (
                   <Link
                     key={item.href}
                     href={item.href}
-                    className="text-surface duration-200 hover:text-primary"
+                    className="text-sm xs:text-base text-surface hover:text-primary duration-200"
                   >
                     {item.text}
                   </Link>
@@ -208,7 +222,7 @@ export function Header() {
                 width={32}
                 height={32}
                 onClick={() => setOpenMenu(true)}
-                className="text-surface block md:hidden cursor-pointer"
+                className="block md:hidden size-8 text-surface cursor-pointer"
               />
             </div>
           </header>

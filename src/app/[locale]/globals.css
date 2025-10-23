@@ -80,6 +80,9 @@
   --color-warning: var(--ikm-warning);
   --color-danger: var(--ikm-danger);
 
+  /* Breakpoints */
+  --breakpoint-xs: 30rem;
+
 }
 
 /* Desplazamiento continuo duplicando el contenido */

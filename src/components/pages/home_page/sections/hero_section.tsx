@@ -25,9 +25,7 @@ export function HeroSection() {
 
       <div className="relative w-full h-full flex items-center justify-center p-4 lg:py-4 lg:px-14">
 
-
-        {/* Contenido principal */}
-        <div className="flex-1 flex flex-col items-center justify-center px-6  gap-5">
+        <div className="flex-1 flex flex-col items-center justify-center px-6 gap-5">
           <div className="text-center max-w-4xl mx-auto space-y-2">
             <h2 className="text-surface/95 text-3xl md:text-5xl font-medium font-oswald">
               {titles("h2")}
