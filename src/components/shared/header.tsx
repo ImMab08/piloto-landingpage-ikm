@@ -219,10 +219,10 @@ export function Header() {
               </div>
 
               <IconMenuBars
-                width={32}
-                height={32}
+                width={30}
+                height={30}
                 onClick={() => setOpenMenu(true)}
-                className="block md:hidden size-8 text-surface cursor-pointer"
+                className="block md:hidden text-surface cursor-pointer"
               />
             </div>
           </header>
