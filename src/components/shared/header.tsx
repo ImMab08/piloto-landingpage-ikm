@@ -202,7 +202,7 @@ export function Header() {
                   <Link
                     key={item.href}
                     href={item.href}
-                    className="text-sm xs:text-base text-surface hover:text-primary duration-200"
+                    className="text-xs xs:text-base text-surface hover:text-primary duration-200"
                   >
                     {item.text}
                   </Link>
