@@ -89,7 +89,7 @@ export function Header() {
   }, [pathname]);
 
   const headerWrapperClass = [
-    "w-full p-6 sm:px-8 md:px-12 lg:px-20 xl:px-36 right-0 z-40 transition-all duration-300",
+    "flex items-center justify-center w-full right-0 z-40 transition-all duration-300",
     pastHero
       ? "fixed top-0 bg-accent-foreground/80 shadow-md backdrop-blur-sm"
       : scrolled
@@ -156,7 +156,7 @@ export function Header() {
       {/* Panel desktop */}
       <div className={headerWrapperClass}>
         <div
-          className={`${
+          className={`max-w-6xl w-full p-6 ${
             pastHero
               ? "flex lg:gap-10 duration-400"
               : "flex w-full md:flex-col md:space-y-4 transition-all duration-300"

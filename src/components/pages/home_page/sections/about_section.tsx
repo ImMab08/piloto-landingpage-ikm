@@ -8,7 +8,7 @@ export function AboutSection() {
   const cards = useTranslations("homePage.aboutSection.cards");
 
   return (
-    <section className="relative flex items-center justify-center h-full py-48 md:py-60 md:h-screen ">
+    <section className="relative flex items-center justify-center h-full py-48 md:py-60 md:h-screen">
       {/* FONDO con desvanecidos azules */}
       <div className="pointer-events-none absolute inset-0">
         {/* degradé general */}
@@ -18,7 +18,7 @@ export function AboutSection() {
         <div className="absolute bottom-28 left-0 md:left-1/3 h-80 w-80 rounded-full bg-primary/40 blur-[200px]" />
       </div>
 
-      <div className="relative mx-auto max-w-7xl">
+      <div className="relative">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 ">
 
           {/* COLUMNA IZQUIERDA: título y párrafo */}

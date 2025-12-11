@@ -27,13 +27,13 @@ export function HeroSection() {
 
         <div className="flex-1 flex flex-col items-center justify-center px-6 gap-5">
           <div className="text-center max-w-4xl mx-auto space-y-2">
-            <h2 className="text-surface/95 text-3xl md:text-5xl font-medium font-oswald">
+            <h2 className="text-surface/95 text-3xl sm:text-4xl md:text-5xl font-medium font-oswald">
               {titles("h2")}
             </h2>
-            <h1 className="text-primary text-5xl md:text-7xl font-semibold font-oswald leading-tight">
+            <h1 className="text-primary text-5xl sm:text-6xl md:text-7xl font-semibold font-oswald leading-tight">
               {titles("h1")}
             </h1>
-            <h3 className="text-surface/90 text-lg md:text-xl font-light font-oswald">
+            <h3 className="text-surface/90 text-lg sm:text-xl font-light font-oswald">
               {titles.rich("h3", {
                 hl: (span) => <span className="text-primary">{span}</span>,
               })}
@@ -49,7 +49,7 @@ export function HeroSection() {
         </div>
 
         {/* Logos */}
-        <div className="absolute left-1/2 -bottom-16 -translate-x-1/2 w-full px-6 md:px-36 2xl:px-96 z-20">
+        <div className="absolute left-1/2 -bottom-16 -translate-x-1/2 w-full max-w-5xl px-6 sm:px-20 md:px-36 lg:px-0 z-20">
           <p className="text-center text-white/90 text-sm md:text-base font-semibold mb-3 px-10 md:px-20">
             {t("brandsTitle")}
           </p>
