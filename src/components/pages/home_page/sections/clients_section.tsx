@@ -114,7 +114,7 @@ export function ClientsSection() {
   return (
     <section
       id="clients"
-      className="w-full h-screen py-16 md:py-24  space-y-10"
+      className="w-full h-screen py-16 space-y-10"
     >
       <div className="space-y-4">
         <div className="space-y-1 md:space-y-2">

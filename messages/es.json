@@ -194,28 +194,28 @@
       "description": "Innovamos con el ecosistema Microsoft 365 y tecnologías a la vanguardia para construir procesos más ágiles, inteligentes y escalables.",
       "cards": [
         {
-          "text": "Automatizaciones",
+          "text": "Power Apps",
           "title": "Aplicaciones que hacen la diferencia",
-          "description": "Diseñamos y optimizamos automatizaciones que liberan a tu equipo de tareas repetitivas, generando eficiencia real.",
-          "image": ""
+          "description": "Construimos apps a la medida, simples y potentes, que resuelven necesidades críticas de tu organización.",
+          "image": "/images/page_services/cards/image_apps.png"
         },
         {
-          "text": "Power Apps",
+          "text": "Automatizaciones",
           "title": "Flujos que impulsan resultados",
-          "description": "Construimos apps a la medida, simples y potentes, que resuelven necesidades críticas de tu organización.",
-          "image": ""
+          "description": "Diseñamos y optimizamos automatizaciones que liberan a tu equipo de tareas repetitivas, generando eficiencia real.",
+          "image": "/images/page_services/cards/image_automate.png"
         },
         {
           "text": "Azure",
           "title": "Escalamos tus ideas en la nube",
           "description": "Innovamos sobre Azure para crear soluciones seguras, flexibles y listas para crecer contigo.",
-          "image": ""
+          "image": "/images/page_services/cards/image_azure.png"
         },
         {
           "text": "ProCode (Desarrollo avanzado)",
           "title": "Construcción sin límites",
-          "description": "Creamos desarrollos avanzados que integran lo mejor del ecosistema Microsoft con soluciones propias de alto impacto.s",
-          "image": ""
+          "description": "Creamos desarrollos avanzados que integran lo mejor del ecosistema Microsoft con soluciones propias de alto impactos.",
+          "image": "/images/page_services/cards/image_procode.png"
         }
       ]
     }

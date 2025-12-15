@@ -15,14 +15,21 @@ export function SkillSection() {
     "bg-gradient-to-tr from-violet-300/30 via-indigo-300/25 to-sky-300/30",
   ];
 
+  const text_cards = [
+    "purple",
+    "primary",
+    "teal",
+    "black",
+  ];
+
   // Posiciones de la grilla para recrear el patrón escalonado de tu imagen:
   // md+: 2 columnas, 6 filas “implícitas”; cada card ocupa 2 filas,
   // alternando col 2 → col 1 → col 2 → col 1 (como tu ejemplo).
   const placements = [
-    "md:col-start-2 md:row-span-2",                 // 1 (arriba derecha)
-    "md:col-start-1 md:row-start-2 md:row-span-2",  // 2 (mitad izquierda)
-    "md:col-start-2 md:row-start-3 md:row-span-2",  // 3 (mitad derecha)
-    "md:col-start-1 md:row-start-4 md:row-span-2",  // 4 (abajo izquierda)
+    "md:col-start-2 md:row-span-2",
+    "md:col-start-1 md:row-start-2 md:row-span-2",
+    "md:col-start-2 md:row-start-3 md:row-span-2",
+    "md:col-start-1 md:row-start-4 md:row-span-2",
   ];
 
   return (
@@ -34,14 +41,13 @@ export function SkillSection() {
         <p className="mt-3 md:mt-4 text-text-tertiary text-base md:text-lg">{t("description")}</p>
       </header>
 
-      <div className="mt-10 md:mt-14 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 md:auto-rows-[290px]">
+      <div className="mt-5 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 md:auto-rows-[300px]">
         {cards.map((card, id) => (
           <article
             key={id}
             className={`
               relative
-              rounded-2xl shadow-xl
-              bg-white/90 backdrop-blur
+              rounded-2xl shadow-xl backdrop-blur
               border border-black/5
               overflow-hidden
               ${placements[id] ?? ""}
@@ -52,32 +58,34 @@ export function SkillSection() {
               className={`
                 pointer-events-none absolute -inset-6 -z-10
                 blur-2xl rounded-[2rem]
-                ${card["gradient"] ?? gradients[id % gradients.length]}
               `}
             />
 
             {/* Contenido */}
-            <div className="p-4 md:p-5">
+            <div className="p-4 md:p-5 h-full flex flex-col">
               {/* Imagen con borde y radio grande como en el mock */}
-              <div className="relative rounded-xl overflow-hidden ring-1 ring-black/5 shadow-md">
+              <div className={`relative rounded-xl overflow-hidden`}>
                 {card.image ? (
-                  <Image
-                    src={card.image}
-                    alt={card.title}
-                    width={1200}
-                    height={800}
-                    className="w-full h-auto"
-                    priority={id < 2}
-                  />
+                  <div className={`aspect-[16/10] w-full ${card["gradient"] ?? gradients[id % gradients.length]}`}>
+                    <Image
+                      src={card.image}
+                      alt={card.title}
+                      width={1200}
+                      height={800}
+                      className={`w-full h-auto relative -right-10 -bottom-10`}
+                      priority={id < 2}
+                    />
+                  </div>
+
                 ) : (
-                  <div className="aspect-[16/10] w-full bg-neutral-100" />
+                  <div className={`aspect-[16/10] w-full ${card["gradient"] ?? gradients[id % gradients.length]}`} />
                 )}
               </div>
 
               {/* Chip + textos */}
               <div className="mt-3 md:mt-4">
-                <span className="inline-flex items-center gap-2 text-[11px] md:text-xs font-semibold text-accent bg-accent/10 px-2.5 py-1 rounded-full">{card.text}</span>
-                <h3 className="mt-2 font-oswald text-lg md:text-xl text-primary">{card.title}</h3>
+                <span className={`inline-flex items-center gap-2 text-xs md:text-sm font-semibold text-${text_cards[id] ?? ""} bg-neutral-100 px-2.5 py-1 rounded-full`}>{card.text}</span>
+                <h3 className={`mt-2 font-oswald text-lg md:text-xl text-${text_cards[id] ?? ""}`}>{card.title}</h3>
                 <p className="mt-1 text-sm md:text-base text-text-tertiary leading-6">{card.description}</p>
               </div>
             </div>

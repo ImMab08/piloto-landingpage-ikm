@@ -7,7 +7,7 @@ export function ServicesPage() {
   return(
     <div className="overflow-hidden select-none">
       <HeroSection />
-      <div className="px-6 md:px-36 2xl:px-96">
+      <div className="max-w-6xl mx-auto p-6">
         <SkillSection />
       </div>
     </div>
